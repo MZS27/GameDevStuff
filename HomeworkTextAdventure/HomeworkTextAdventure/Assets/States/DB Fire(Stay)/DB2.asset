@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: DB2
+  m_EditorClassIdentifier: 
+  storyText: "You are now in the class and the Math lecture begins. You are starting
+    to feel sleepy when Mrs. Strupp turns her attention towards you.\r\n\r\n\"YOU!
+    Have you done your homew-\r\"\n\r\nSuddenly, the fire alarm goes off. What do
+    you do?\r\n\r\n1) Run outside\n2) Stay in class\r"
+  nextStates:
+  - {fileID: 11400000, guid: ce14dc021bdd015439b8c9b5b057a059, type: 2}
+  - {fileID: 11400000, guid: b4d5c70f5149f674abab25b0afc4ef42, type: 2}

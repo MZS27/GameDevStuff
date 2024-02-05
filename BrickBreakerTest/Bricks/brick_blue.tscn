@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bivaxwiy6huyq"]
+
+[ext_resource type="Texture2D" uid="uid://bm3xm68gna8xn" path="res://Assets/breakout_pieces.png" id="1_6mfsp"]
+[ext_resource type="Script" path="res://Bricks/brick_blue.gd" id="1_07mek"]
+[ext_resource type="Texture2D" uid="uid://b7hf5trah21f8" path="res://Assets/NewSprites.png" id="2_otwoj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e75mk"]
+radius = 8.0
+height = 32.0
+
+[node name="BrickBlue" type="StaticBody2D" groups=["brick"]]
+scale = Vector2(2, 2)
+script = ExtResource("1_07mek")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_e75mk")
+
+[node name="Sprite2D-New" type="Sprite2D" parent="."]
+position = Vector2(0, 2.38419e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_otwoj")
+region_enabled = true
+region_rect = Rect2(128, 16, 64, 32)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("1_6mfsp")
+region_enabled = true
+region_rect = Rect2(8, 8, 32, 16)

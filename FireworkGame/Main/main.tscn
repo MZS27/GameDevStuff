@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=3 uid="uid://cvopvatsheay0"]
+
+[ext_resource type="Script" path="res://Main/SwipeDetector.gd" id="1_eueyd"]
+[ext_resource type="PackedScene" uid="uid://qcw6jyvh6wkw" path="res://Boundary/object_boundary.tscn" id="2_4dyhn"]
+[ext_resource type="Texture2D" uid="uid://crjpi0nqli8w3" path="res://Assets/Background/back.png" id="3_an63n"]
+[ext_resource type="PackedScene" uid="uid://b4574rn2p01g2" path="res://Temp/temp_player.tscn" id="4_543ft"]
+[ext_resource type="Texture2D" uid="uid://bmyg7djy48c8" path="res://Assets/Background/mountains.png" id="4_lkwj1"]
+[ext_resource type="Texture2D" uid="uid://el77p15l6xfr" path="res://Assets/Background/far-buildings.png" id="5_pqfr6"]
+[ext_resource type="Texture2D" uid="uid://ckm0nae17js1t" path="res://Assets/Background/near-buildings.png" id="6_7v5dh"]
+
+[node name="Main" type="Node2D"]
+
+[node name="ObjectBoundary" parent="." instance=ExtResource("2_4dyhn")]
+
+[node name="SwipeDetector" type="Node" parent="."]
+script = ExtResource("1_eueyd")
+
+[node name="Timer" type="Timer" parent="SwipeDetector"]
+wait_time = 3.0
+one_shot = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+visible = false
+
+[node name="Back" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(792, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Back"]
+texture_filter = 1
+scale = Vector2(5.5, 5.5)
+texture = ExtResource("3_an63n")
+centered = false
+
+[node name="Mountains" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1232, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Mountains"]
+texture_filter = 1
+scale = Vector2(5.5, 5.5)
+texture = ExtResource("4_lkwj1")
+centered = false
+
+[node name="Far_Buildings" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(792, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Far_Buildings"]
+texture_filter = 1
+scale = Vector2(5.5, 5.5)
+texture = ExtResource("5_pqfr6")
+centered = false
+
+[node name="Near_Buildings" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1144, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Near_Buildings"]
+texture_filter = 1
+scale = Vector2(5.5, 5.5)
+texture = ExtResource("6_7v5dh")
+centered = false
+
+[node name="TempPlayer" parent="." instance=ExtResource("4_543ft")]
+position = Vector2(362, 651)

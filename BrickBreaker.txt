@@ -1,0 +1,6 @@
+wall width 20;
+top wall position : 10(0 + 20/2) on X axis, 512 (screenwidth i.e 1024/2) on Y axis
+bottom wall position : 590(600 - 20/2) on X axis, 512 (screenwidth i.e 1024/2) on Y axis
+
+
+You don't have to win. You just have to survive and avoid your health from going to zero. Whether you win a game with 100% health left or none, it does not matter

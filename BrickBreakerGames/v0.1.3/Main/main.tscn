@@ -1,0 +1,172 @@
+[gd_scene load_steps=15 format=3 uid="uid://c2wqxjm534wnf"]
+
+[ext_resource type="PackedScene" uid="uid://bxcdl5vqea1eq" path="res://Player/player.tscn" id="1_g778q"]
+[ext_resource type="Script" path="res://Main/main.gd" id="1_ltfta"]
+[ext_resource type="PackedScene" uid="uid://c7krvyg2c8hbj" path="res://Boundary/boundary_tile_map.tscn" id="2_hij8l"]
+[ext_resource type="PackedScene" uid="uid://bh2jjxmwqtqrw" path="res://Ball/ball.tscn" id="3_2lifk"]
+[ext_resource type="PackedScene" uid="uid://8bj3ylmierb5" path="res://Bricks/brick_orange.tscn" id="4_vor58"]
+[ext_resource type="PackedScene" uid="uid://jphoa1eg01c3" path="res://Bricks/brick_diamond.tscn" id="5_2usm5"]
+[ext_resource type="Texture2D" uid="uid://d38t4gn0w1sij" path="res://Assets/Sprites/Timer.png" id="6_2hjg1"]
+[ext_resource type="Texture2D" uid="uid://b4uepirema5rc" path="res://Assets/Sprites/trophy.png" id="7_cponv"]
+[ext_resource type="PackedScene" uid="uid://brs64i3im6xbh" path="res://Boundary/barrier.tscn" id="8_cl3m6"]
+[ext_resource type="FontFile" uid="uid://chit2t7ljdt18" path="res://Assets/Fonts/Next Sunday.otf" id="10_8po7g"]
+[ext_resource type="PackedScene" uid="uid://6h5j5gsvbhje" path="res://Music/bg_music.tscn" id="11_28fmu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xh4ap"]
+font = ExtResource("10_8po7g")
+font_size = 52
+
+[sub_resource type="LabelSettings" id="LabelSettings_82ydf"]
+font = ExtResource("10_8po7g")
+font_size = 42
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vilt8"]
+size = Vector2(32, 768)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_ltfta")
+
+[node name="Player" parent="." instance=ExtResource("1_g778q")]
+position = Vector2(180, 400)
+
+[node name="BoundaryTileMap" parent="." instance=ExtResource("2_hij8l")]
+
+[node name="Ball" parent="." instance=ExtResource("3_2lifk")]
+position = Vector2(400, 400)
+
+[node name="Bricks" type="Node" parent="."]
+
+[node name="BrickOrange" parent="Bricks" instance=ExtResource("4_vor58")]
+position = Vector2(800, 476)
+
+[node name="BrickOrange2" parent="Bricks" instance=ExtResource("4_vor58")]
+position = Vector2(640, 604)
+
+[node name="BrickOrange3" parent="Bricks" instance=ExtResource("4_vor58")]
+position = Vector2(640, 348)
+
+[node name="BrickOrange4" parent="Bricks" instance=ExtResource("4_vor58")]
+position = Vector2(800, 220)
+
+[node name="BrickDiamond" parent="Bricks" instance=ExtResource("5_2usm5")]
+position = Vector2(640, 220)
+
+[node name="BrickDiamond2" parent="Bricks" instance=ExtResource("5_2usm5")]
+position = Vector2(800, 348)
+
+[node name="BrickDiamond5" parent="Bricks" instance=ExtResource("5_2usm5")]
+position = Vector2(800, 604)
+
+[node name="BrickDiamond6" parent="Bricks" instance=ExtResource("5_2usm5")]
+position = Vector2(640, 476)
+
+[node name="BrickOrange5" parent="Bricks" instance=ExtResource("4_vor58")]
+position = Vector2(1120, 476)
+
+[node name="BrickOrange6" parent="Bricks" instance=ExtResource("4_vor58")]
+position = Vector2(960, 604)
+
+[node name="BrickOrange7" parent="Bricks" instance=ExtResource("4_vor58")]
+position = Vector2(960, 348)
+
+[node name="BrickOrange8" parent="Bricks" instance=ExtResource("4_vor58")]
+position = Vector2(1120, 220)
+
+[node name="BrickDiamond3" parent="Bricks" instance=ExtResource("5_2usm5")]
+position = Vector2(960, 220)
+
+[node name="BrickDiamond4" parent="Bricks" instance=ExtResource("5_2usm5")]
+position = Vector2(1120, 348)
+
+[node name="BrickDiamond7" parent="Bricks" instance=ExtResource("5_2usm5")]
+position = Vector2(1120, 604)
+
+[node name="BrickDiamond8" parent="Bricks" instance=ExtResource("5_2usm5")]
+position = Vector2(960, 476)
+
+[node name="HUD" type="Node" parent="."]
+
+[node name="Timer" type="Sprite2D" parent="HUD"]
+position = Vector2(40, 40)
+texture = ExtResource("6_2hjg1")
+
+[node name="Trophy" type="Sprite2D" parent="HUD"]
+position = Vector2(1240, 40)
+texture = ExtResource("7_cponv")
+
+[node name="CurrentTimeLabel" type="Label" parent="HUD"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 80.0
+offset_top = 16.0
+offset_right = -1104.0
+offset_bottom = -645.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+label_settings = SubResource("LabelSettings_xh4ap")
+vertical_alignment = 2
+
+[node name="BestTimeLabel" type="Label" parent="HUD"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1099.0
+offset_top = 16.0
+offset_right = -85.0
+offset_bottom = -645.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "-"
+label_settings = SubResource("LabelSettings_xh4ap")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="TitleLabel" type="Label" parent="HUD"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 592.0
+offset_top = 8.0
+offset_right = -592.0
+offset_bottom = -653.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Brick Slinger"
+label_settings = SubResource("LabelSettings_82ydf")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="GameOverSignalArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameOverSignalArea"]
+position = Vector2(-29, 384)
+shape = SubResource("RectangleShape2D_vilt8")
+
+[node name="BgMusic" parent="." instance=ExtResource("11_28fmu")]
+process_mode = 3
+
+[node name="PaddleLimits" type="Node" parent="."]
+
+[node name="Upper" type="Node2D" parent="PaddleLimits"]
+position = Vector2(180, 144)
+
+[node name="Lower" type="Node2D" parent="PaddleLimits"]
+position = Vector2(180, 656)
+
+[node name="Barriers" type="Node" parent="."]
+
+[node name="Barrier" parent="Barriers" instance=ExtResource("8_cl3m6")]
+position = Vector2(8, 628)
+
+[node name="Barrier2" parent="Barriers" instance=ExtResource("8_cl3m6")]
+position = Vector2(8, 476)
+
+[node name="Barrier3" parent="Barriers" instance=ExtResource("8_cl3m6")]
+position = Vector2(8, 324)
+
+[node name="Barrier4" parent="Barriers" instance=ExtResource("8_cl3m6")]
+position = Vector2(8, 172)
+
+[connection signal="body_exited" from="GameOverSignalArea" to="." method="_on_game_over_signal_area_exited"]

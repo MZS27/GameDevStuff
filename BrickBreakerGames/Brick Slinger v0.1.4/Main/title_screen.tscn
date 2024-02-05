@@ -1,0 +1,95 @@
+[gd_scene load_steps=9 format=3 uid="uid://csay7ruvwgu4o"]
+
+[ext_resource type="FontFile" uid="uid://d1v34ga01j2fy" path="res://Assets/Fonts/Next Sunday.otf" id="1_r7vwm"]
+[ext_resource type="Script" path="res://Main/title_screen.gd" id="1_ucbkr"]
+
+[sub_resource type="Gradient" id="Gradient_mjycu"]
+colors = PackedColorArray(1, 0.882353, 0.490196, 1, 1, 0.682353, 0.290196, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_nd25h"]
+gradient = SubResource("Gradient_mjycu")
+
+[sub_resource type="LabelSettings" id="LabelSettings_w6daa"]
+font = ExtResource("1_r7vwm")
+font_size = 60
+font_color = Color(0.639216, 0.215686, 0.160784, 1)
+
+[sub_resource type="Gradient" id="Gradient_eyay3"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.968627, 0.415686, 0.137255, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xt2gc"]
+gradient = SubResource("Gradient_eyay3")
+
+[sub_resource type="Theme" id="Theme_guo2g"]
+default_font = ExtResource("1_r7vwm")
+default_font_size = 40
+
+[node name="title_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ucbkr")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_nd25h")
+
+[node name="titleLabel" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 470.5
+offset_top = 254.5
+offset_right = -470.5
+offset_bottom = -326.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Brick Slinger
+(v0.1.4)"
+label_settings = SubResource("LabelSettings_w6daa")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 549.0
+offset_top = 408.0
+offset_right = -547.0
+offset_bottom = -248.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_xt2gc")
+
+[node name="Button" type="Button" parent="TextureRect/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -3.304
+anchor_top = -5.125
+anchor_right = 3.652
+anchor_bottom = 6.125
+offset_left = 607.936
+offset_top = 328.0
+offset_right = -487.968
+offset_bottom = -320.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_guo2g")
+theme_override_colors/font_color = Color(1, 0.992157, 0.941176, 1)
+text = "PLAY"
+flat = true
+icon_alignment = 1
+
+[connection signal="pressed" from="TextureRect/TextureRect/Button" to="." method="_on_button_pressed"]

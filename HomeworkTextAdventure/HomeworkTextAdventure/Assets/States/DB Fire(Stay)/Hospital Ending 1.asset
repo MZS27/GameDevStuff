@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: Hospital Ending 1
+  m_EditorClassIdentifier: 
+  storyText: 'You catch your breath and wake up in the hospital. Turns out, the fire
+    was real. You''ve finally snapped back from your coma after two weeks and it
+    seems like you will be bedridden for quite a while.
+
+
+    All the things that
+    you were worried about on that fateful day two weeks ago are very much irrelevant
+    now. Yet all those experiences still linger in memory.
+
+
+    The End [Hospital
+    Ending 1]'
+  nextStates:
+  - {fileID: 11400000, guid: ebe1d79ad50ed3b418be2fa2fa676247, type: 2}

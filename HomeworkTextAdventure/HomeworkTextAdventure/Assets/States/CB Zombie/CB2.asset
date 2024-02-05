@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: CB2
+  m_EditorClassIdentifier: 
+  storyText: "You're assembled in the school ground with the others. The principal
+    takes up the mic and says \"It looks like there has been a contamination in the
+    food in our canteen. It tends to turn people into what you kids may call zombies...\"\r\n\r\nYou
+    hear quite a lot of laughter in the ground and some murmuring over this silly
+    announcement. \r\n\r\nAs he makes the announcement, some kids begin falling to
+    the floor unconscious. Panicked, the principal and the teachers rush towards
+    the exit.\n\r\n1) Rush towards the exit\r\n2) Wait around and see what happens"
+  nextStates:
+  - {fileID: 11400000, guid: d3c80d9ee9811b34182b58043f57abf2, type: 2}
+  - {fileID: 11400000, guid: deae76e38b203cc4f8becae42ff0b0d7, type: 2}

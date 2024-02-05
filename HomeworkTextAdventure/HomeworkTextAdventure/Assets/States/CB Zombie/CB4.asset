@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: CB4
+  m_EditorClassIdentifier: 
+  storyText: 'You stand in place while the other students scream and run around the
+    ground.
+
+
+    The unconscious students begin waking up and they are completely
+    out of their minds. The principal was right. They do turn into zombies.
+
+
+    While
+    you''re looking around, one of the zombies suddenly jumps at you. You try to
+    wrestle him away as he lays on top of you trying to bite you.
+
+
+    You struggle
+    to get the living dead creature off you but it seems hopeless.
+
+
+    1) Scream
+    for help'
+  nextStates:
+  - {fileID: 11400000, guid: 2d18c9dfc91f05e4aa5505744bc89327, type: 2}

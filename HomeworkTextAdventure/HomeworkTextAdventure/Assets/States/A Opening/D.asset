@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: D
+  m_EditorClassIdentifier: 
+  storyText: 'You reached the washroom. You can hear some noise coming from the inside.
+    As soon as you walk in, everyone turns silent  You see a guy in a red hoodie
+    giving you a weird stare.
+
+
+    You see a lit cigarette butt on the floor. What
+    do you do?
+
+
+    1) Stomp on it and extinguish it
+
+    2) Pretend not to notice
+    it and just go about your business.'
+  nextStates:
+  - {fileID: 11400000, guid: 7868b88dc2f0734408ed2ea695765122, type: 2}
+  - {fileID: 11400000, guid: 1669c3d98516bf24797b9bf14fbfaba3, type: 2}

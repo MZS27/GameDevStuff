@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: Title Screen
+  m_EditorClassIdentifier: 
+  storyText: "Welcome to the School Survival Text Adventure Game!\n\nThis is a choose
+    your own adventure style game where the choices you make determine the journey
+    you take. \n\nThere are no 'right' choices to make in this game. Feel free to
+    explore different paths and see different scenarios unfold.\n\nEach playthrough
+    of this game is relatively short and it is recommended that you play this game
+    multiple times and explore different scenarios to get the complete experience.\n\nTo
+    perform an action, press '1' or '2' on the keyboard. Press 'R' at any point to
+    restart the game.\n\n1) Start Game\n2) Do nothing"
+  nextStates:
+  - {fileID: 11400000, guid: 4d21b89db8896764c994fab683893e86, type: 2}

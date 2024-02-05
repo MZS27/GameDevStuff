@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: DC1
+  m_EditorClassIdentifier: 
+  storyText: 'As soon as you exit the classroom you hear cracking and popping noises
+    right above you. Whack! You feel something heavy hit your head.
+
+
+    You open
+    your eyes and find yourself back in your classroom. Mrs. Strupp is standing near
+    you with a folded book in her hand which she seems to have swatted your head
+    with.
+
+
+    So Mr. Sleepyhead have you done your homework?
+
+
+    1) "Yes"
+
+    2)
+    "No"'
+  nextStates:
+  - {fileID: 11400000, guid: 0ce7c1621945a8c49aab8a0069e7b5a3, type: 2}
+  - {fileID: 11400000, guid: 2deba03e311281547bc9f64d06ca808b, type: 2}

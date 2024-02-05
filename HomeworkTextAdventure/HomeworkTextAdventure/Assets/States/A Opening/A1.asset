@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: A1
+  m_EditorClassIdentifier: 
+  storyText: '"Ugh, here we go again" she sighs "And why don''t you want to go this
+    time?"
+
+
+    1) Fake Sickness
+
+    2) "I didn''t do my homework"'
+  nextStates:
+  - {fileID: 11400000, guid: 205cf6815f802534694254ce475611ac, type: 2}
+  - {fileID: 11400000, guid: 7fcf52e01f3371f4893e753b41eb556a, type: 2}

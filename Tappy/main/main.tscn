@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://ostxjtbdpmoo"]
+
+[ext_resource type="Script" path="res://main/main.gd" id="1_14xs3"]
+[ext_resource type="Texture2D" uid="uid://c2ksrbr403fik" path="res://assets/background/sky.png" id="1_h0pg0"]
+[ext_resource type="LabelSettings" uid="uid://ci5so1q4eeumo" path="res://assets/LABEL_S60_RED.tres" id="3_3bm4o"]
+[ext_resource type="FontFile" uid="uid://cee1iywccb414" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="4_43ojm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3ckc4"]
+font = ExtResource("4_43ojm")
+font_size = 40
+font_color = Color(0.905882, 0.984314, 0.972549, 1)
+outline_size = 9
+outline_color = Color(0.160784, 0.458824, 0.360784, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 0.658824)
+shadow_offset = Vector2(2, 2)
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_14xs3")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_h0pg0")
+expand_mode = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameTitleLabel" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Tappy
+Plane"
+label_settings = ExtResource("3_3bm4o")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer"]
+layout_mode = 2
+text = "TAP TO PLAY"
+label_settings = SubResource("LabelSettings_3ckc4")
+horizontal_alignment = 1
+vertical_alignment = 1

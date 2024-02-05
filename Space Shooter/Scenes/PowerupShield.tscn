@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://xk7wb0gh3qua"]
+
+[ext_resource type="PackedScene" uid="uid://6dcxf6vcvxaj" path="res://Scenes/Powerup.tscn" id="1_2cxp2"]
+[ext_resource type="Script" path="res://Scripts/PowerupShield.gd" id="2_vtfrx"]
+
+[node name="PowerupShield" instance=ExtResource("1_2cxp2")]
+script = ExtResource("2_vtfrx")
+shieldTime = 6.0

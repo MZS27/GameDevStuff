@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: DB4
+  m_EditorClassIdentifier: 
+  storyText: 'The ceiling begins to crumble and fall and you get trapped under some
+    heavy debris. The weight of the debris is too heavy to lift it off alone and
+    there is no one around that can help. All the dust and smoke in the air also
+    make it very hard to breathe. You find yourself gasping for breath and about
+    to pass out.
+
+
+    1) Close your eyes and try to snap out of this nightmare'
+  nextStates:
+  - {fileID: 11400000, guid: 6ea833c23831d9341bb085eb37108cfa, type: 2}

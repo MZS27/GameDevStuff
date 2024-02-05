@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3s5b72deyamr"]
+
+[ext_resource type="Script" path="res://Walls/rotating_walls.gd" id="1_p03sd"]
+[ext_resource type="Texture2D" uid="uid://c5ylpak8wyk7y" path="res://Assets/NewSprites.png" id="1_yxcir"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7o243"]
+size = Vector2(32, 224)
+
+[node name="RotatingWalls" type="StaticBody2D" groups=["ball_reflector"]]
+script = ExtResource("1_p03sd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7o243")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("1_yxcir")
+region_enabled = true
+region_rect = Rect2(16, 80, 224, 32)

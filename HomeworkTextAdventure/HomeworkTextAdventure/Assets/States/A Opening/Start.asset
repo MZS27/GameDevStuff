@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: Start
+  m_EditorClassIdentifier: 
+  storyText: "You wake up on a fine morning. The sun is shining, the birds are chirping.
+    But it's not a fine morning for you. It's a school morning. Also, you haven't
+    done your Math assignment. As this is your third strike, you are going to get
+    suspended.\r\n\r\nYour mom wakes you up \"Son, wake up it's already 7:00, you're
+    about to miss the bus.\" \r\n\r\nWhat do you do?\n\r\n1) Get ready for the nightmare\r\n2)
+    Tell her \"I don't wanna go\"\r"
+  nextStates:
+  - {fileID: 11400000, guid: 2f302f7fcab59e145bc12a47a773a0f7, type: 2}
+  - {fileID: 11400000, guid: a23a19e021ec69b488d3cd8ab228a629, type: 2}

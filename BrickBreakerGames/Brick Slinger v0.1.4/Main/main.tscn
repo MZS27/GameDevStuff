@@ -1,0 +1,240 @@
+[gd_scene load_steps=21 format=3 uid="uid://cxpc5kc3xjf5r"]
+
+[ext_resource type="Texture2D" uid="uid://dyi3hejuasfwh" path="res://Assets/Sprites/NewSprites.png" id="1_oluix"]
+[ext_resource type="Script" path="res://Main/main.gd" id="1_q0c54"]
+[ext_resource type="PackedScene" uid="uid://b8qmp7il7ywmp" path="res://Player/player.tscn" id="2_hpobf"]
+[ext_resource type="PackedScene" uid="uid://c7jl2q17qnnc" path="res://Ball/ball.tscn" id="3_xn03e"]
+[ext_resource type="PackedScene" uid="uid://fhvgf2krdhll" path="res://Bricks/brick_rect.tscn" id="4_qhigq"]
+[ext_resource type="AudioStream" uid="uid://b7xnkul4xl7xb" path="res://Assets/Music/BgMusic.mp3" id="6_qr1de"]
+[ext_resource type="PackedScene" uid="uid://ljtluo6gqxml" path="res://Boundary/barrier.tscn" id="7_cqvou"]
+[ext_resource type="Texture2D" uid="uid://c8g41tu6uowk2" path="res://Assets/Sprites/Timer.png" id="8_6mq7q"]
+[ext_resource type="Texture2D" uid="uid://dp3qw2ollgjuh" path="res://Assets/Sprites/trophy.png" id="9_e78xa"]
+[ext_resource type="FontFile" uid="uid://d1v34ga01j2fy" path="res://Assets/Fonts/Next Sunday.otf" id="10_663e6"]
+[ext_resource type="Script" path="res://Main/instructions.gd" id="11_b4w2q"]
+[ext_resource type="PackedScene" uid="uid://chl8slpqdcp71" path="res://Shooter/shooter.tscn" id="11_me4c0"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xkrgg"]
+texture = ExtResource("1_oluix")
+texture_region_size = Vector2i(32, 32)
+9:4/0 = 0
+9:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:4/0/physics_layer_0/angular_velocity = 0.0
+9:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+9:6/0 = 0
+9:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:6/0/physics_layer_0/angular_velocity = 0.0
+9:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_2wpmm"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 3
+physics_layer_0/collision_mask = 3
+sources/0 = SubResource("TileSetAtlasSource_xkrgg")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_segyv"]
+size = Vector2(48, 637)
+
+[sub_resource type="LabelSettings" id="LabelSettings_33qk8"]
+font = ExtResource("10_663e6")
+font_size = 44
+font_color = Color(1, 0.992157, 0.941176, 1)
+
+[sub_resource type="Gradient" id="Gradient_cx6gv"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 0.992157, 0.941176, 0.392157)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wq38h"]
+gradient = SubResource("Gradient_cx6gv")
+
+[sub_resource type="LabelSettings" id="LabelSettings_32atv"]
+font = ExtResource("10_663e6")
+font_size = 24
+font_color = Color(0.639216, 0.215686, 0.160784, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wp2v8"]
+font = ExtResource("10_663e6")
+font_size = 50
+font_color = Color(1, 0.992157, 0.941176, 1)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_q0c54")
+
+[node name="WallTileMap" type="TileMap" parent="." groups=["walls"]]
+scale = Vector2(0.5, 0.5)
+tile_set = SubResource("TileSet_2wpmm")
+format = 2
+layer_0/tile_data = PackedInt32Array(2883584, 589824, 1342177286, 2883585, 589824, 4, 2883586, 589824, 4, 2883587, 589824, 4, 2883588, 589824, 4, 2883589, 589824, 4, 2883590, 589824, 4, 2883591, 589824, 4, 2883592, 589824, 4, 2883593, 589824, 4, 2883594, 589824, 4, 2883595, 589824, 4, 2883596, 589824, 4, 2883597, 589824, 4, 2883598, 589824, 4, 2883599, 589824, 4, 2883600, 589824, 4, 2883601, 589824, 4, 2883602, 589824, 4, 2883603, 589824, 4, 2883604, 589824, 4, 2883605, 589824, 4, 2883606, 589824, 4, 2883607, 589824, 4, 2883608, 589824, 4, 2883609, 589824, 4, 2883610, 589824, 4, 2883611, 589824, 4, 2883612, 589824, 4, 2883613, 589824, 4, 2883614, 589824, 4, 2883615, 589824, 4, 2883616, 589824, 4, 2883617, 589824, 4, 2883618, 589824, 4, 2883619, 589824, 4, 2883620, 589824, 4, 2883621, 589824, 4, 2883622, 589824, 4, 2883623, 589824, 4, 2883624, 589824, 4, 2883625, 589824, 4, 2883626, 589824, 4, 2883627, 589824, 4, 2883628, 589824, 4, 2883629, 589824, 4, 2883630, 589824, 4, 2883631, 589824, 4, 2883632, 589824, 4, 2883633, 589824, 4, 2883634, 589824, 4, 2883635, 589824, 4, 2883636, 589824, 4, 2883637, 589824, 4, 2883638, 589824, 4, 2883639, 589824, 4, 2883640, 589824, 4, 2883641, 589824, 4, 2883642, 589824, 4, 2883643, 589824, 4, 2883644, 589824, 4, 2883645, 589824, 4, 2883646, 589824, 4, 2883647, 589824, 4, 2883648, 589824, 4, 2883649, 589824, 4, 2883650, 589824, 4, 2883651, 589824, 4, 2883652, 589824, 4, 2883653, 589824, 4, 2883654, 589824, 4, 2883655, 589824, 4, 2883656, 589824, 4, 2883657, 589824, 4, 2883658, 589824, 4, 2883659, 589824, 4, 2883660, 589824, 4, 2883661, 589824, 4, 2883662, 589824, 4, 327759, 589824, 536870918, 393295, 589824, 1610612740, 458831, 589824, 1610612740, 524367, 589824, 1610612740, 589903, 589824, 1610612740, 655439, 589824, 1610612740, 720975, 589824, 1610612740, 786511, 589824, 1610612740, 852047, 589824, 1610612740, 917583, 589824, 1610612740, 983119, 589824, 1610612740, 1048655, 589824, 1610612740, 1114191, 589824, 1610612740, 1179727, 589824, 1610612740, 1245263, 589824, 1610612740, 1310799, 589824, 1610612740, 1376335, 589824, 1610612740, 1441871, 589824, 1610612740, 1507407, 589824, 1610612740, 1572943, 589824, 1610612740, 1638479, 589824, 1610612740, 1704015, 589824, 1610612740, 1769551, 589824, 1610612740, 1835087, 589824, 1610612740, 1900623, 589824, 1610612740, 1966159, 589824, 1610612740, 2031695, 589824, 1610612740, 2097231, 589824, 1610612740, 2162767, 589824, 1610612740, 2228303, 589824, 1610612740, 2293839, 589824, 1610612740, 2359375, 589824, 1610612740, 2424911, 589824, 1610612740, 2490447, 589824, 1610612740, 2555983, 589824, 1610612740, 2621519, 589824, 1610612740, 2687055, 589824, 1610612740, 2752591, 589824, 1610612740, 2818127, 589824, 1610612740, 2883663, 589824, 6, 327680, 589824, 805306374, 327681, 589824, 536870916, 327682, 589824, 536870916, 327683, 589824, 536870916, 327684, 589824, 536870916, 327685, 589824, 536870916, 327686, 589824, 536870916, 327687, 589824, 536870916, 327688, 589824, 536870916, 327689, 589824, 536870916, 327690, 589824, 536870916, 327691, 589824, 536870916, 327692, 589824, 536870916, 327693, 589824, 536870916, 327694, 589824, 536870916, 327695, 589824, 536870916, 327696, 589824, 536870916, 327697, 589824, 536870916, 327698, 589824, 536870916, 327699, 589824, 536870916, 327700, 589824, 536870916, 327701, 589824, 536870916, 327702, 589824, 536870916, 327703, 589824, 536870916, 327704, 589824, 536870916, 327705, 589824, 536870916, 327706, 589824, 536870916, 327707, 589824, 536870916, 327708, 589824, 536870916, 327709, 589824, 536870916, 327710, 589824, 536870916, 327711, 589824, 536870916, 327712, 589824, 536870916, 327713, 589824, 536870916, 327714, 589824, 536870916, 327715, 589824, 536870916, 327716, 589824, 536870916, 327717, 589824, 536870916, 327718, 589824, 536870916, 327719, 589824, 536870916, 327720, 589824, 536870916, 327721, 589824, 536870916, 327722, 589824, 536870916, 327723, 589824, 536870916, 327724, 589824, 536870916, 327725, 589824, 536870916, 327726, 589824, 536870916, 327727, 589824, 536870916, 327728, 589824, 536870916, 327729, 589824, 536870916, 327730, 589824, 536870916, 327731, 589824, 536870916, 327732, 589824, 536870916, 327733, 589824, 536870916, 327734, 589824, 536870916, 327735, 589824, 536870916, 327736, 589824, 536870916, 327737, 589824, 536870916, 327738, 589824, 536870916, 327739, 589824, 536870916, 327740, 589824, 536870916, 327741, 589824, 536870916, 327742, 589824, 536870916, 327743, 589824, 536870916, 327744, 589824, 536870916, 327745, 589824, 536870916, 327746, 589824, 536870916, 327747, 589824, 536870916, 327748, 589824, 536870916, 327749, 589824, 536870916, 327750, 589824, 536870916, 327751, 589824, 536870916, 327752, 589824, 536870916, 327753, 589824, 536870916, 327754, 589824, 536870916, 327755, 589824, 536870916, 327756, 589824, 536870916, 327757, 589824, 536870916, 327758, 589824, 536870916)
+
+[node name="Player" parent="." instance=ExtResource("2_hpobf")]
+position = Vector2(192, 400)
+
+[node name="Ball" parent="." instance=ExtResource("3_xn03e")]
+position = Vector2(400, 400)
+
+[node name="Bricks" type="Node" parent="."]
+
+[node name="Brick_Rect" parent="Bricks" instance=ExtResource("4_qhigq")]
+position = Vector2(768, 272)
+color = "Violet"
+
+[node name="Brick_Rect2" parent="Bricks" instance=ExtResource("4_qhigq")]
+position = Vector2(896, 248)
+color = "Blue"
+
+[node name="Brick_Rect3" parent="Bricks" instance=ExtResource("4_qhigq")]
+position = Vector2(1024, 224)
+color = "Yellow"
+
+[node name="Brick_Rect4" parent="Bricks" instance=ExtResource("4_qhigq")]
+position = Vector2(896, 448)
+color = "Yellow"
+
+[node name="Brick_Rect5" parent="Bricks" instance=ExtResource("4_qhigq")]
+position = Vector2(768, 176)
+color = "Red"
+
+[node name="Brick_Rect6" parent="Bricks" instance=ExtResource("4_qhigq")]
+position = Vector2(896, 152)
+color = "Violet"
+
+[node name="Brick_Rect7" parent="Bricks" instance=ExtResource("4_qhigq")]
+position = Vector2(1024, 128)
+color = "Blue"
+
+[node name="Brick_Rect8" parent="Bricks" instance=ExtResource("4_qhigq")]
+position = Vector2(896, 352)
+color = "Red"
+
+[node name="Brick_Rect9" parent="Bricks" instance=ExtResource("4_qhigq")]
+position = Vector2(768, 616)
+color = "Red"
+
+[node name="Brick_Rect10" parent="Bricks" instance=ExtResource("4_qhigq")]
+position = Vector2(896, 640)
+color = "Violet"
+
+[node name="Brick_Rect11" parent="Bricks" instance=ExtResource("4_qhigq")]
+position = Vector2(1024, 664)
+color = "Yellow"
+
+[node name="Brick_Rect12" parent="Bricks" instance=ExtResource("4_qhigq")]
+position = Vector2(1152, 664)
+color = "Blue"
+
+[node name="Brick_Rect13" parent="Bricks" instance=ExtResource("4_qhigq")]
+position = Vector2(768, 520)
+color = "Violet"
+
+[node name="Brick_Rect14" parent="Bricks" instance=ExtResource("4_qhigq")]
+position = Vector2(896, 544)
+color = "Red"
+
+[node name="Brick_Rect15" parent="Bricks" instance=ExtResource("4_qhigq")]
+position = Vector2(1024, 568)
+color = "Blue"
+
+[node name="Brick_Rect16" parent="Bricks" instance=ExtResource("4_qhigq")]
+position = Vector2(1152, 128)
+color = "Yellow"
+
+[node name="BgMusic" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("6_qr1de")
+volume_db = -15.0
+autoplay = true
+
+[node name="BarrierArea" type="Node" parent="."]
+
+[node name="Barrier" parent="BarrierArea" instance=ExtResource("7_cqvou")]
+position = Vector2(8, 172)
+scale = Vector2(0.5, 0.5)
+
+[node name="Barrier2" parent="BarrierArea" instance=ExtResource("7_cqvou")]
+position = Vector2(8, 324)
+scale = Vector2(0.5, 0.5)
+
+[node name="Barrier3" parent="BarrierArea" instance=ExtResource("7_cqvou")]
+position = Vector2(8, 476)
+scale = Vector2(0.5, 0.5)
+
+[node name="Barrier4" parent="BarrierArea" instance=ExtResource("7_cqvou")]
+position = Vector2(8, 628)
+scale = Vector2(0.5, 0.5)
+
+[node name="GameOverArea" type="Area2D" parent="BarrierArea"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BarrierArea/GameOverArea"]
+position = Vector2(-32, 398.5)
+shape = SubResource("RectangleShape2D_segyv")
+
+[node name="HUD" type="Node" parent="."]
+
+[node name="Timer" type="Sprite2D" parent="HUD"]
+position = Vector2(40, 41)
+texture = ExtResource("8_6mq7q")
+
+[node name="Trophy" type="Sprite2D" parent="HUD"]
+position = Vector2(1232, 40)
+texture = ExtResource("9_e78xa")
+
+[node name="TitleLabel" type="Label" parent="HUD"]
+visible = false
+offset_left = 288.0
+offset_top = 22.0
+offset_right = 588.0
+offset_bottom = 79.0
+text = "Brick Slinger"
+label_settings = SubResource("LabelSettings_33qk8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InstructionBox" type="TextureRect" parent="HUD"]
+offset_left = 352.0
+offset_top = 16.0
+offset_right = 928.0
+offset_bottom = 66.0
+texture = SubResource("GradientTexture1D_wq38h")
+script = ExtResource("11_b4w2q")
+
+[node name="Instructions" type="Label" parent="HUD/InstructionBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Bullets are loaded when the ball hits the shooter"
+label_settings = SubResource("LabelSettings_32atv")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="CurrentTimeLabel" type="Label" parent="HUD"]
+offset_left = 78.0
+offset_top = 19.0
+offset_right = 134.0
+offset_bottom = 76.0
+text = "0"
+label_settings = SubResource("LabelSettings_wp2v8")
+
+[node name="BestTimeLabel" type="Label" parent="HUD"]
+offset_left = 1139.0
+offset_top = 21.0
+offset_right = 1195.0
+offset_bottom = 78.0
+text = "-"
+label_settings = SubResource("LabelSettings_wp2v8")
+horizontal_alignment = 2
+
+[node name="PlayerLimits" type="Node" parent="."]
+
+[node name="LimitUpper" type="Node2D" parent="PlayerLimits"]
+position = Vector2(192, 144)
+
+[node name="LimitLower" type="Node2D" parent="PlayerLimits"]
+position = Vector2(192, 656)
+
+[node name="Shooter" parent="." instance=ExtResource("11_me4c0")]
+position = Vector2(1152, 384)
+
+[connection signal="body_exited" from="BarrierArea/GameOverArea" to="." method="_on_game_over_area_exited"]

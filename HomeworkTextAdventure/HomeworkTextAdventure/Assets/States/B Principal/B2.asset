@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: B2
+  m_EditorClassIdentifier: 
+  storyText: 'You enter Mr. Gruman''s office and you immediately notice the window
+    light reflecting on his shiny, bald head. He does not look very happy to see
+    you.
+
+
+    "So it''s you again. How many times have you been here already? You
+    sleep in class, you don''t do your homework and now you''re late. Tell me, what
+    the hell is wrong with you?"
+
+
+    1) "I missed the bus"
+
+    2) "My head is
+    not as bright as yours"'
+  nextStates:
+  - {fileID: 11400000, guid: dc78a669596a6244d8c0714ba18a58c7, type: 2}
+  - {fileID: 11400000, guid: 39045419a3298ad4bb17bebcc6b7b989, type: 2}

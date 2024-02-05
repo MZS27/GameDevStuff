@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1y6n7c6185ve"]
+
+[ext_resource type="Script" path="res://Bricks/brick.gd" id="1_hvvrn"]
+[ext_resource type="Texture2D" uid="uid://c5ylpak8wyk7y" path="res://Assets/NewSprites.png" id="1_vur5b"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rlkwy"]
+radius = 16.0
+height = 64.0
+
+[node name="Brick" type="StaticBody2D" groups=["breakable", "bricks"]]
+script = ExtResource("1_hvvrn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_rlkwy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_vur5b")
+region_enabled = true
+region_rect = Rect2(128, 16, 64, 32)

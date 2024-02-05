@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: C
+  m_EditorClassIdentifier: 
+  storyText: 'You reach the canteen. It''s a noisy place full of scattered chairs
+    and a lot of commotion.
+
+
+    In the corner of the canteen, you see a rat. It''s
+    a rather peculiar rat with blue and green stripes. It runs off into the kitchen.
+
+
+    1)
+    Follow the rat.
+
+    2) Have a snack and head back to class.'
+  nextStates:
+  - {fileID: 11400000, guid: 9bde81100a2814d4b91c7e99efe89af6, type: 2}
+  - {fileID: 11400000, guid: d42db93748e85f84dadb1a612464b7e6, type: 2}

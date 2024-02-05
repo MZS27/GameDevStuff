@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: DA7
+  m_EditorClassIdentifier: 
+  storyText: 'In a desperate attempt you put your hand forward to try and stop the
+    fire blast. Suddenly, a gust of wind erupts from your hand sending the hoodie
+    kid flying into a wall.
+
+
+    The entire school watching from the ground cheers
+    you on.
+
+
+    You hear a voice from somewhere "Your powers are finally starting
+    to wake up! WAKE UP!"
+
+
+    1) Wake up'
+  nextStates:
+  - {fileID: 11400000, guid: 64250b6646d0bb547bf2716f34355b9a, type: 2}

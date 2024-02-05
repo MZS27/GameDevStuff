@@ -1,0 +1,5 @@
+res://default_env.tres
+res://Scenes/Level.tscn
+res://Scenes/brick.tscn
+res://Scenes/Player.tscn
+res://Scenes/Ball.tscn

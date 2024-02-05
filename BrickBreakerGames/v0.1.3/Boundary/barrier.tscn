@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://brs64i3im6xbh"]
+
+[ext_resource type="Script" path="res://Boundary/barrier.gd" id="1_sco2p"]
+[ext_resource type="Texture2D" uid="uid://d4h6b4ucoo5db" path="res://Assets/Sprites/Barrier.png" id="2_gk5p3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nbdtl"]
+size = Vector2(16, 152)
+
+[node name="Barrier" type="StaticBody2D" groups=["breakable"]]
+script = ExtResource("1_sco2p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_nbdtl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -8.0
+offset_top = -76.0
+offset_right = 8.0
+offset_bottom = 76.0
+color = Color(0.639216, 0.215686, 0.160784, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_gk5p3")

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: CA6
+  m_EditorClassIdentifier: 
+  storyText: 'The chef turns his anger away from you and towards the servers.
+
+
+    "You
+    lazy re-tards! Why you not serving customers.."
+
+
+    1) Quietly slip out and
+    head back to class.'
+  nextStates:
+  - {fileID: 11400000, guid: 39411ac239e2b7542b7d6d4aca470f1d, type: 2}

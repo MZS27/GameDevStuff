@@ -1,0 +1,168 @@
+[gd_scene load_steps=16 format=3 uid="uid://buqg6fn2280gg"]
+
+[ext_resource type="PackedScene" uid="uid://bmmffmki3u7a8" path="res://Paddle/paddle.tscn" id="1_0ulx3"]
+[ext_resource type="Script" path="res://Main/main.gd" id="1_5lgf8"]
+[ext_resource type="PackedScene" uid="uid://b57quurcsybpm" path="res://Ball/ball.tscn" id="2_grtbj"]
+[ext_resource type="Texture2D" uid="uid://c5ylpak8wyk7y" path="res://Assets/NewSprites.png" id="3_5n7w1"]
+[ext_resource type="PackedScene" uid="uid://c1y6n7c6185ve" path="res://Bricks/brick.tscn" id="4_vlit5"]
+[ext_resource type="PackedScene" uid="uid://c3s5b72deyamr" path="res://Walls/rotating_walls.tscn" id="5_womhi"]
+[ext_resource type="PackedScene" uid="uid://bcw7kivjlc7i1" path="res://Walls/barrier.tscn" id="6_dmmme"]
+[ext_resource type="PackedScene" uid="uid://ho28u7nm5nh4" path="res://Music/bg_music.tscn" id="8_oj0p7"]
+[ext_resource type="Texture2D" uid="uid://d3jfcm3kv8loj" path="res://Assets/trophy.png" id="9_o1584"]
+[ext_resource type="Texture2D" uid="uid://hkqrmxw0mst4" path="res://Assets/Timer.png" id="10_ptwbg"]
+[ext_resource type="FontFile" uid="uid://dqcg2lyi5660" path="res://Assets/Fonts/Next Sunday.otf" id="11_opcey"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5lrvy"]
+texture = ExtResource("3_5n7w1")
+18:4/size_in_atlas = Vector2i(2, 2)
+18:4/0 = 0
+18:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+18:4/0/physics_layer_0/angular_velocity = 0.0
+18:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+22:4/size_in_atlas = Vector2i(2, 2)
+22:4/0 = 0
+22:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+22:4/0/physics_layer_0/angular_velocity = 0.0
+22:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+22:0/size_in_atlas = Vector2i(2, 2)
+22:0/0 = 0
+22:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+22:0/0/physics_layer_0/angular_velocity = 0.0
+22:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+18:0/size_in_atlas = Vector2i(2, 2)
+18:0/0 = 0
+18:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+18:0/0/physics_layer_0/angular_velocity = 0.0
+18:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_327cy"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_5lrvy")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1fct"]
+size = Vector2(40, 750)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7oae6"]
+font = ExtResource("11_opcey")
+font_size = 56
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_5lgf8")
+
+[node name="Paddle" parent="." instance=ExtResource("1_0ulx3")]
+position = Vector2(152, 392)
+
+[node name="Ball" parent="." instance=ExtResource("2_grtbj")]
+position = Vector2(704, 392)
+
+[node name="WallTileMap" type="TileMap" parent="."]
+texture_filter = 1
+scale = Vector2(0.5, 0.5)
+tile_set = SubResource("TileSet_327cy")
+format = 2
+layer_0/tile_data = PackedInt32Array(327759, 1441792, 4, 393295, 1441792, 0, 458831, 1441792, 0, 524367, 1441792, 0, 589903, 1441792, 0, 655439, 1441792, 0, 720975, 1441792, 0, 786511, 1441792, 0, 852047, 1441792, 0, 917583, 1441792, 0, 983119, 1441792, 0, 1048655, 1441792, 0, 1114191, 1441792, 0, 1179727, 1441792, 0, 1245263, 1441792, 0, 1310799, 1441792, 0, 1376335, 1441792, 0, 1441871, 1441792, 0, 1507407, 1441792, 0, 1572943, 1441792, 0, 1638479, 1441792, 0, 1704015, 1441792, 0, 1769551, 1441792, 0, 1835087, 1441792, 0, 1900623, 1441792, 0, 1966159, 1441792, 0, 2031695, 1441792, 0, 2097231, 1441792, 0, 2162767, 1441792, 0, 2228303, 1441792, 0, 2293839, 1441792, 0, 2359375, 1441792, 0, 2424911, 1441792, 0, 2490447, 1441792, 0, 2555983, 1441792, 0, 2621519, 1441792, 0, 2687055, 1441792, 0, 2752591, 1441792, 0, 2818127, 1441792, 0, 2883663, 1179648, 4, 2883662, 1179648, 0, 2883661, 1179648, 0, 2883660, 1179648, 0, 2883659, 1179648, 0, 2883658, 1179648, 0, 2883657, 1179648, 0, 2883656, 1179648, 0, 2883655, 1179648, 0, 2883654, 1179648, 0, 2883653, 1179648, 0, 2883652, 1179648, 0, 2883651, 1179648, 0, 2883650, 1179648, 0, 2883649, 1179648, 0, 2883648, 1179648, 0, 2883647, 1179648, 0, 2883646, 1179648, 0, 2883645, 1179648, 0, 2883644, 1179648, 0, 2883643, 1179648, 0, 2883642, 1179648, 0, 2883641, 1179648, 0, 2883640, 1179648, 0, 2883639, 1179648, 0, 2883638, 1179648, 0, 2883637, 1179648, 0, 2883636, 1179648, 0, 2883635, 1179648, 0, 2883634, 1179648, 0, 2883633, 1179648, 0, 2883632, 1179648, 0, 2883631, 1179648, 0, 2883630, 1179648, 0, 2883629, 1179648, 0, 2883628, 1179648, 0, 2883627, 1179648, 0, 2883626, 1179648, 0, 2883625, 1179648, 0, 2883624, 1179648, 0, 2883623, 1179648, 0, 2883622, 1179648, 0, 2883621, 1179648, 0, 2883620, 1179648, 0, 2883619, 1179648, 0, 2883618, 1179648, 0, 2883617, 1179648, 0, 2883616, 1179648, 0, 2883615, 1179648, 0, 2883614, 1179648, 0, 2883613, 1179648, 0, 2883612, 1179648, 0, 2883611, 1179648, 0, 2883610, 1179648, 0, 2883609, 1179648, 0, 2883608, 1179648, 0, 2883607, 1179648, 0, 2883606, 1179648, 0, 2883605, 1179648, 0, 2883604, 1179648, 0, 2883603, 1179648, 0, 2883602, 1179648, 0, 2883601, 1179648, 0, 2883600, 1179648, 0, 2883599, 1179648, 0, 2883598, 1179648, 0, 2883597, 1179648, 0, 2883596, 1179648, 0, 2883595, 1179648, 0, 2883594, 1179648, 0, 2883593, 1179648, 0, 2883592, 1179648, 0, 2883591, 1179648, 0, 2883590, 1179648, 0, 2883589, 1179648, 0, 2883588, 1179648, 0, 2883587, 1179648, 0, 2883586, 1179648, 0, 2883585, 1179648, 0, 2883584, 1441792, 805306372, 327681, 1179648, 0, 327682, 1179648, 0, 327683, 1179648, 0, 327684, 1179648, 0, 327685, 1179648, 0, 327686, 1179648, 0, 327687, 1179648, 0, 327688, 1179648, 0, 327689, 1179648, 0, 327690, 1179648, 0, 327691, 1179648, 0, 327692, 1179648, 0, 327693, 1179648, 0, 327694, 1179648, 0, 327695, 1179648, 0, 327696, 1179648, 0, 327697, 1179648, 0, 327698, 1179648, 0, 327699, 1179648, 0, 327700, 1179648, 0, 327701, 1179648, 0, 327702, 1179648, 0, 327703, 1179648, 0, 327704, 1179648, 0, 327705, 1179648, 0, 327706, 1179648, 0, 327707, 1179648, 0, 327708, 1179648, 0, 327709, 1179648, 0, 327710, 1179648, 0, 327711, 1179648, 0, 327712, 1179648, 0, 327713, 1179648, 0, 327714, 1179648, 0, 327715, 1179648, 0, 327716, 1179648, 0, 327717, 1179648, 0, 327718, 1179648, 0, 327719, 1179648, 0, 327720, 1179648, 0, 327721, 1179648, 0, 327722, 1179648, 0, 327723, 1179648, 0, 327724, 1179648, 0, 327725, 1179648, 0, 327726, 1179648, 0, 327727, 1179648, 0, 327728, 1179648, 0, 327729, 1179648, 0, 327730, 1179648, 0, 327731, 1179648, 0, 327732, 1179648, 0, 327733, 1179648, 0, 327734, 1179648, 0, 327735, 1179648, 0, 327736, 1179648, 0, 327737, 1179648, 0, 327738, 1179648, 0, 327739, 1179648, 0, 327740, 1179648, 0, 327741, 1179648, 0, 327742, 1179648, 0, 327743, 1179648, 0, 327744, 1179648, 0, 327745, 1179648, 0, 327746, 1179648, 0, 327747, 1179648, 0, 327748, 1179648, 0, 327749, 1179648, 0, 327750, 1179648, 0, 327751, 1179648, 0, 327752, 1179648, 0, 327753, 1179648, 0, 327754, 1179648, 0, 327755, 1179648, 0, 327756, 1179648, 0, 327757, 1179648, 0, 327758, 1179648, 0, 327680, 1179648, 805306372)
+
+[node name="Bricks" type="Node" parent="."]
+
+[node name="Brick" parent="Bricks" instance=ExtResource("4_vlit5")]
+position = Vector2(704, 160)
+
+[node name="Brick5" parent="Bricks" instance=ExtResource("4_vlit5")]
+position = Vector2(816, 160)
+
+[node name="Brick6" parent="Bricks" instance=ExtResource("4_vlit5")]
+position = Vector2(920, 160)
+
+[node name="Brick7" parent="Bricks" instance=ExtResource("4_vlit5")]
+position = Vector2(816, 608)
+
+[node name="Brick8" parent="Bricks" instance=ExtResource("4_vlit5")]
+position = Vector2(920, 608)
+
+[node name="Brick2" parent="Bricks" instance=ExtResource("4_vlit5")]
+position = Vector2(704, 608)
+
+[node name="Brick3" parent="Bricks" instance=ExtResource("4_vlit5")]
+position = Vector2(1024, 160)
+
+[node name="Brick9" parent="Bricks" instance=ExtResource("4_vlit5")]
+position = Vector2(1096, 238)
+rotation = -0.0127546
+
+[node name="Brick10" parent="Bricks" instance=ExtResource("4_vlit5")]
+position = Vector2(1200, 238)
+
+[node name="Brick11" parent="Bricks" instance=ExtResource("4_vlit5")]
+position = Vector2(1096, 526)
+
+[node name="Brick12" parent="Bricks" instance=ExtResource("4_vlit5")]
+position = Vector2(1200, 526)
+
+[node name="Brick13" parent="Bricks" instance=ExtResource("4_vlit5")]
+position = Vector2(1096, 454)
+
+[node name="Brick14" parent="Bricks" instance=ExtResource("4_vlit5")]
+position = Vector2(1200, 454)
+
+[node name="Brick15" parent="Bricks" instance=ExtResource("4_vlit5")]
+position = Vector2(1096, 382)
+
+[node name="Brick16" parent="Bricks" instance=ExtResource("4_vlit5")]
+position = Vector2(1200, 382)
+
+[node name="Brick17" parent="Bricks" instance=ExtResource("4_vlit5")]
+position = Vector2(1096, 310)
+
+[node name="Brick18" parent="Bricks" instance=ExtResource("4_vlit5")]
+position = Vector2(1200, 310)
+
+[node name="Brick4" parent="Bricks" instance=ExtResource("4_vlit5")]
+position = Vector2(1024, 608)
+
+[node name="RotatingWalls" parent="." instance=ExtResource("5_womhi")]
+position = Vector2(872, 392)
+
+[node name="Barrier" parent="." instance=ExtResource("6_dmmme")]
+position = Vector2(8, 400)
+
+[node name="GameOverSignalArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameOverSignalArea"]
+position = Vector2(-30, 360)
+shape = SubResource("RectangleShape2D_e1fct")
+
+[node name="Bg_Music" parent="." instance=ExtResource("8_oj0p7")]
+process_mode = 3
+volume_db = -10.0
+
+[node name="HUD" type="Node" parent="."]
+
+[node name="TrophySprite" type="Sprite2D" parent="HUD"]
+texture_filter = 1
+position = Vector2(1240, 40)
+texture = ExtResource("9_o1584")
+
+[node name="TimerSprite" type="Sprite2D" parent="HUD"]
+texture_filter = 1
+position = Vector2(40, 40)
+texture = ExtResource("10_ptwbg")
+
+[node name="TimeLabel" type="Label" parent="HUD"]
+offset_left = 80.0
+offset_top = 16.0
+offset_right = 192.0
+offset_bottom = 84.0
+text = "0"
+label_settings = SubResource("LabelSettings_7oae6")
+
+[node name="BestScoreLabel" type="Label" parent="HUD"]
+offset_left = 1112.0
+offset_top = 16.0
+offset_right = 1200.0
+offset_bottom = 84.0
+text = "-"
+label_settings = SubResource("LabelSettings_7oae6")
+horizontal_alignment = 2
+
+[connection signal="body_shape_exited" from="GameOverSignalArea" to="." method="_on_game_over_signal_body_exited"]

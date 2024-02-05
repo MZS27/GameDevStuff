@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://jphoa1eg01c3"]
+
+[ext_resource type="Script" path="res://Bricks/brick_diamond.gd" id="1_lihsg"]
+[ext_resource type="Texture2D" uid="uid://drb051jn2l2om" path="res://Assets/Sprites/BrickHex.png" id="1_qc140"]
+
+[node name="BrickDiamond" type="StaticBody2D" groups=["breakable"]]
+script = ExtResource("1_lihsg")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, -32, 26, 0, 0, 32, -26, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("1_qc140")

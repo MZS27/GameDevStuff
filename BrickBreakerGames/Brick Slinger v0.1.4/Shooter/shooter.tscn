@@ -1,0 +1,82 @@
+[gd_scene load_steps=8 format=3 uid="uid://chl8slpqdcp71"]
+
+[ext_resource type="Script" path="res://Shooter/shooter.gd" id="1_0e11i"]
+[ext_resource type="Texture2D" uid="uid://tofq2e31apsj" path="res://Assets/Sprites/Shooter-B0.png" id="2_i1775"]
+[ext_resource type="Texture2D" uid="uid://cau0spck2rudb" path="res://Assets/Sprites/Shooter-B1.png" id="3_hkjxc"]
+[ext_resource type="Texture2D" uid="uid://dywjvu6bhlvpv" path="res://Assets/Sprites/Shooter-B2.png" id="4_0moqp"]
+[ext_resource type="Texture2D" uid="uid://di8fxamwexxco" path="res://Assets/Sprites/Shooter-B3.png" id="5_y3jkn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8u3w6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_i1775")
+}],
+"loop": true,
+"name": &"b0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_hkjxc")
+}],
+"loop": true,
+"name": &"b1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_0moqp")
+}],
+"loop": true,
+"name": &"b2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_y3jkn")
+}],
+"loop": true,
+"name": &"b3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_i1775")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hkjxc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0moqp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_y3jkn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a14kw"]
+radius = 49.4952
+
+[node name="Shooter" type="StaticBody2D" groups=["controlled"]]
+z_index = -1
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1_0e11i")
+
+[node name="ShooterSprite" type="AnimatedSprite2D" parent="."]
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_8u3w6")
+
+[node name="ShootingPoint" type="Node2D" parent="ShooterSprite"]
+position = Vector2(0, -114)
+
+[node name="CentrePoint" type="Node2D" parent="ShooterSprite"]
+
+[node name="CircleCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_a14kw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(81.3333, -17.3333, 24, -42.6667, 24, 42.6667, 81.3333, 17.3333, 109.333, 17.3333, 114.667, 10.6667, 114.667, -10.6667, 109.333, -17.3333)

@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: DB5
+  m_EditorClassIdentifier: 
+  storyText: 'You find yourself back in your classroom in a Math lecture. Ms. Strupp
+    turns her attention towards you and asks if you have done your homework.
+
+
+    "You''ve
+    failed this simple task so many times that I have lost count. You give me no
+    choice. I will give you another chance."
+
+
+    The other students begin looking
+    around in confusion.
+
+
+    1) "Thank you, teacher"
+
+    2) "Why would you give
+    me another chance?"'
+  nextStates:
+  - {fileID: 11400000, guid: 3bfe1c1c53bde184494cbbe0c1c459cd, type: 2}
+  - {fileID: 11400000, guid: 3bfe1c1c53bde184494cbbe0c1c459cd, type: 2}

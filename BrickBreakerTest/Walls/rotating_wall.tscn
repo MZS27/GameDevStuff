@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxbkcv6ytvgen"]
+
+[ext_resource type="Script" path="res://Walls/rotating_wall.gd" id="1_5s4r7"]
+[ext_resource type="Texture2D" uid="uid://bwqxyo2eikrnk" path="res://Assets/more_breakout_pieces.png" id="1_ir8pd"]
+[ext_resource type="Texture2D" uid="uid://b7hf5trah21f8" path="res://Assets/NewSprites.png" id="2_5esbw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sau2u"]
+size = Vector2(16, 80)
+
+[node name="RotatingWall" type="StaticBody2D" groups=["reflectObjects"]]
+script = ExtResource("1_5s4r7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 1.5)
+shape = SubResource("RectangleShape2D_sau2u")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-2.56949e-07, 2.04146e-06)
+rotation = 1.5708
+scale = Vector2(0.535714, 0.5)
+texture = ExtResource("2_5esbw")
+region_enabled = true
+region_rect = Rect2(16, 80, 224, 32)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+rotation = 1.5708
+scale = Vector2(1.5, 1)
+texture = ExtResource("1_ir8pd")
+region_enabled = true
+region_rect = Rect2(96, 352, 80, 16)

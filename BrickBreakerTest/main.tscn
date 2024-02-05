@@ -1,0 +1,161 @@
+[gd_scene load_steps=13 format=3 uid="uid://bxndpc1lma15a"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_jwsur"]
+[ext_resource type="PackedScene" uid="uid://n64xntifsl2e" path="res://TileMaps/wall_tile_map.tscn" id="1_lekh1"]
+[ext_resource type="PackedScene" uid="uid://hutthv0q8eyj" path="res://Player/player.tscn" id="2_ebpco"]
+[ext_resource type="PackedScene" uid="uid://bivaxwiy6huyq" path="res://Bricks/brick_blue.tscn" id="3_02ier"]
+[ext_resource type="PackedScene" uid="uid://dh2ty0lvah4b" path="res://Ball/ball.tscn" id="3_3s6ly"]
+[ext_resource type="PackedScene" uid="uid://cxbkcv6ytvgen" path="res://Walls/rotating_wall.tscn" id="5_qy216"]
+[ext_resource type="PackedScene" uid="uid://b41bvbenghoe5" path="res://Walls/protective_barrier.tscn" id="6_k8hub"]
+[ext_resource type="FontFile" uid="uid://ddx6fyrys2g6r" path="res://Assets/Fonts/joystix monospace.otf" id="8_w62w7"]
+[ext_resource type="Texture2D" uid="uid://cx2pcpsxe3v8d" path="res://Assets/trophy.png" id="9_l6a58"]
+[ext_resource type="Texture2D" uid="uid://ce6bpkuj87p3p" path="res://Assets/Timer.png" id="9_qup6u"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tl5dk"]
+font = ExtResource("8_w62w7")
+font_size = 39
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5pgvh"]
+size = Vector2(24, 768)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_jwsur")
+
+[node name="WallTileMap" parent="." instance=ExtResource("1_lekh1")]
+position = Vector2(64, 64)
+scale = Vector2(0.5, 0.5)
+layer_0/tile_data = PackedInt32Array(1, 589826, 0, 34, 589826, 0, 35, 589826, 0, 36, 589826, 0, 37, 589826, 0, 38, 589826, 0, 39, 589826, 0, 40, 589826, 0, 41, 589826, 0, 2, 589826, 0, 3, 589826, 0, 4, 589826, 0, 5, 589826, 0, 6, 589826, 0, 7, 589826, 0, 8, 589826, 0, 9, 589826, 0, 10, 589826, 0, 11, 589826, 0, 12, 589826, 0, 13, 589826, 0, 14, 589826, 0, 15, 589826, 0, 16, 589826, 0, 17, 589826, 0, 18, 589826, 0, 19, 589826, 0, 20, 589826, 0, 21, 589826, 0, 22, 589826, 0, 23, 589826, 0, 24, 589826, 0, 25, 589826, 0, 26, 589826, 0, 27, 589826, 0, 28, 589826, 0, 29, 589826, 0, 30, 589826, 0, 31, 589826, 0, 32, 589826, 0, 33, 589826, 0, 42, 589826, 0, 43, 589826, 0, 44, 589826, 0, 45, 589826, 0, 46, 589826, 0, 47, 589826, 0, 48, 589826, 0, 49, 589826, 0, 50, 589826, 0, 51, 589826, 0, 52, 589826, 0, 53, 589826, 0, 54, 589826, 0, 55, 589826, 0, 56, 589826, 0, 57, 589826, 0, 58, 589826, 0, 59, 589826, 0, 60, 589826, 0, 61, 589826, 0, 62, 589826, 0, 63, 589826, 0, 64, 589826, 0, 65, 589826, 0, 66, 589826, 0, 67, 589826, 0, 68, 589826, 0, 69, 589826, 0, 70, 589826, 0, 2555905, 589826, 0, 2555906, 589826, 0, 2555907, 589826, 0, 2555908, 589826, 0, 2555909, 589826, 0, 2555910, 589826, 0, 2555911, 589826, 0, 2555912, 589826, 0, 2555913, 589826, 0, 2555914, 589826, 0, 2555915, 589826, 0, 2555916, 589826, 0, 2555917, 589826, 0, 2555918, 589826, 0, 2555919, 589826, 0, 2555920, 589826, 0, 2555921, 589826, 0, 2555922, 589826, 0, 2555923, 589826, 0, 2555924, 589826, 0, 2555925, 589826, 0, 2555926, 589826, 0, 2555927, 589826, 0, 2555928, 589826, 0, 2555929, 589826, 0, 2555930, 589826, 0, 2555931, 589826, 0, 2555932, 589826, 0, 2555933, 589826, 0, 2555934, 589826, 0, 2555935, 589826, 0, 2555936, 589826, 0, 2555937, 589826, 0, 2555938, 589826, 0, 2555939, 589826, 0, 2555940, 589826, 0, 2555941, 589826, 0, 2555942, 589826, 0, 2555943, 589826, 0, 2555944, 589826, 0, 2555945, 589826, 0, 2555946, 589826, 0, 2555947, 589826, 0, 2555948, 589826, 0, 2555949, 589826, 0, 2555950, 589826, 0, 2555951, 589826, 0, 2555952, 589826, 0, 2555953, 589826, 0, 2555954, 589826, 0, 2555955, 589826, 0, 2555956, 589826, 0, 2555957, 589826, 0, 2555958, 589826, 0, 2555959, 589826, 0, 2555960, 589826, 0, 2555961, 589826, 0, 2555962, 589826, 0, 2555963, 589826, 0, 2555964, 589826, 0, 2555965, 589826, 0, 2555966, 589826, 0, 2555967, 589826, 0, 2555968, 589826, 0, 2555969, 589826, 0, 2555970, 589826, 0, 2555971, 589826, 0, 2555972, 589826, 0, 2555973, 589826, 0, 2555974, 589826, 0, 74, 720898, 2, 65610, 720898, 0, 131146, 720898, 0, 196682, 720898, 0, 262218, 720898, 0, 327754, 720898, 0, 393290, 720898, 0, 458826, 720898, 0, 524362, 720898, 0, 589898, 720898, 0, 655434, 720898, 0, 720970, 720898, 0, 786506, 720898, 0, 852042, 720898, 0, 917578, 720898, 0, 983114, 720898, 0, 1048650, 720898, 0, 1114186, 720898, 0, 1179722, 720898, 0, 1245258, 720898, 0, 1310794, 720898, 0, 1376330, 720898, 0, 1441866, 720898, 0, 1507402, 720898, 0, 1572938, 720898, 0, 1638474, 720898, 0, 1704010, 720898, 0, 1769546, 720898, 0, 1835082, 720898, 0, 1900618, 720898, 0, 1966154, 720898, 0, 2031690, 720898, 0, 2097226, 720898, 0, 2162762, 720898, 0, 2228298, 720898, 0, 2293834, 720898, 0, 2359370, 720898, 0, 2424906, 720898, 0, 2490442, 720898, 0, 2555978, 589826, 2, 71, 589826, 0, 72, 589826, 0, 73, 589826, 0, 2555975, 589826, 0, 2555977, 589826, 0, 2555976, 589826, 0, 2621439, 589826, 0, 2555904, 589826, 0, 65535, 589826, 0, 0, 589826, 0, 2621438, 589826, 0, 65534, 589826, 0, 65533, 589826, 0, 2621436, 720898, 805306370, 2621437, 589826, 0, 65532, 589826, 805306370)
+
+[node name="Player" parent="." instance=ExtResource("2_ebpco")]
+position = Vector2(232, 384)
+SPEED = 25.0
+
+[node name="Ball" parent="." instance=ExtResource("3_3s6ly")]
+position = Vector2(408, 400)
+mass = 0.01
+ballSpeed = 300
+
+[node name="Bricks" type="Node" parent="."]
+
+[node name="BrickBlue" parent="Bricks" instance=ExtResource("3_02ier")]
+position = Vector2(656, 128)
+
+[node name="BrickBlue4" parent="Bricks" instance=ExtResource("3_02ier")]
+position = Vector2(848, 128)
+
+[node name="BrickBlue6" parent="Bricks" instance=ExtResource("3_02ier")]
+position = Vector2(752, 128)
+
+[node name="BrickBlue3" parent="Bricks" instance=ExtResource("3_02ier")]
+position = Vector2(896, 192)
+
+[node name="BrickBlue2" parent="Bricks" instance=ExtResource("3_02ier")]
+position = Vector2(896, 576)
+
+[node name="BrickBlue5" parent="Bricks" instance=ExtResource("3_02ier")]
+position = Vector2(1040, 168)
+
+[node name="BrickBlue7" parent="Bricks" instance=ExtResource("3_02ier")]
+position = Vector2(800, 192)
+
+[node name="BrickBlue21" parent="Bricks" instance=ExtResource("3_02ier")]
+position = Vector2(744, 384)
+
+[node name="BrickBlue8" parent="Bricks" instance=ExtResource("3_02ier")]
+position = Vector2(1136, 168)
+
+[node name="BrickBlue9" parent="Bricks" instance=ExtResource("3_02ier")]
+position = Vector2(800, 576)
+
+[node name="BrickBlue10" parent="Bricks" instance=ExtResource("3_02ier")]
+position = Vector2(1040, 232)
+
+[node name="BrickBlue11" parent="Bricks" instance=ExtResource("3_02ier")]
+position = Vector2(944, 128)
+
+[node name="BrickBlue12" parent="Bricks" instance=ExtResource("3_02ier")]
+position = Vector2(1136, 232)
+
+[node name="BrickBlue13" parent="Bricks" instance=ExtResource("3_02ier")]
+position = Vector2(656, 640)
+
+[node name="BrickBlue14" parent="Bricks" instance=ExtResource("3_02ier")]
+position = Vector2(848, 640)
+
+[node name="BrickBlue15" parent="Bricks" instance=ExtResource("3_02ier")]
+position = Vector2(752, 640)
+
+[node name="BrickBlue16" parent="Bricks" instance=ExtResource("3_02ier")]
+position = Vector2(1040, 528)
+
+[node name="BrickBlue18" parent="Bricks" instance=ExtResource("3_02ier")]
+position = Vector2(1136, 592)
+
+[node name="BrickBlue19" parent="Bricks" instance=ExtResource("3_02ier")]
+position = Vector2(1040, 592)
+
+[node name="BrickBlue20" parent="Bricks" instance=ExtResource("3_02ier")]
+position = Vector2(1136, 528)
+
+[node name="BrickBlue17" parent="Bricks" instance=ExtResource("3_02ier")]
+position = Vector2(944, 640)
+
+[node name="RotatingWalls" type="Node" parent="."]
+
+[node name="RotatingWall" parent="RotatingWalls" instance=ExtResource("5_qy216")]
+position = Vector2(648, 256)
+
+[node name="RotatingWall2" parent="RotatingWalls" instance=ExtResource("5_qy216")]
+position = Vector2(1088, 384)
+
+[node name="RotatingWall3" parent="RotatingWalls" instance=ExtResource("5_qy216")]
+position = Vector2(648, 512)
+
+[node name="RotatingWall4" parent="RotatingWalls" instance=ExtResource("5_qy216")]
+position = Vector2(888, 384)
+
+[node name="HUD" type="Node" parent="."]
+
+[node name="TimeLabel" type="Label" parent="HUD"]
+offset_left = 72.0
+offset_top = 8.0
+offset_right = 256.0
+offset_bottom = 56.0
+text = "0"
+label_settings = SubResource("LabelSettings_tl5dk")
+
+[node name="LowScoreLabel" type="Label" parent="HUD"]
+offset_left = 1064.0
+offset_top = 8.0
+offset_right = 1201.0
+offset_bottom = 56.0
+text = "-"
+label_settings = SubResource("LabelSettings_tl5dk")
+horizontal_alignment = 2
+
+[node name="TimerIcon" type="TextureRect" parent="HUD"]
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 64.0
+offset_bottom = 56.0
+texture = ExtResource("9_qup6u")
+expand_mode = 1
+
+[node name="TrophyIcon" type="TextureRect" parent="HUD"]
+offset_left = 1208.0
+offset_top = 8.0
+offset_right = 1256.0
+offset_bottom = 56.0
+texture = ExtResource("9_l6a58")
+expand_mode = 1
+
+[node name="GameOverArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameOverArea"]
+position = Vector2(-24, 376)
+shape = SubResource("RectangleShape2D_5pgvh")
+
+[node name="ProtectiveBarrier" parent="GameOverArea" instance=ExtResource("6_k8hub")]
+position = Vector2(16, 384)
+
+[connection signal="body_exited" from="GameOverArea" to="." method="_on_game_over_area_exited"]

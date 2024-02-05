@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvan56jos2bu8"]
+
+[ext_resource type="Texture2D" uid="uid://cg7rtt0p7adax" path="res://Assets/Sprites/BrickHex.png" id="1_lhven"]
+[ext_resource type="Script" path="res://Bricks/brick_hex.gd" id="1_putib"]
+
+[node name="Brick_Hex" type="StaticBody2D"]
+script = ExtResource("1_putib")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_lhven")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(0, -201, 161, 0, 0, 201, -161, 0)

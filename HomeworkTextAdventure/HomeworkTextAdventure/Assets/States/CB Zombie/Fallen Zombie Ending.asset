@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: Fallen Zombie Ending
+  m_EditorClassIdentifier: 
+  storyText: 'You try to climb the fence but your leg is caught by someone and you
+    fall to the ground.
+
+
+    Thud! You open your eyes and find yourself fallen on
+    the classroom floor. You look around and you see your Math teacher glaring at
+    you.There is only one blood thirsty creature you are scared of right now.
+
+
+    She
+    yells "Is my class so boring that you are literally falling asleep on the floor?
+    And what about the assignment?"
+
+
+    You are taken to the principal''s office
+    and thereby suspended for two weeks.
+
+
+    The End [Fallen Zombie Ending]'
+  nextStates:
+  - {fileID: 11400000, guid: ebe1d79ad50ed3b418be2fa2fa676247, type: 2}

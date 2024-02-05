@@ -1,0 +1,94 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhvljbjxrt5fh"]
+
+[ext_resource type="Script" path="res://UserInterface/game_over_popup.gd" id="1_5j4dt"]
+[ext_resource type="FontFile" uid="uid://chit2t7ljdt18" path="res://Assets/Fonts/Next Sunday.otf" id="1_fmt5d"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_f05es"]
+font = ExtResource("1_fmt5d")
+font_size = 22
+font_color = Color(0.968627, 0.415686, 0.137255, 1)
+
+[sub_resource type="Theme" id="Theme_myjip"]
+default_font = ExtResource("1_fmt5d")
+default_font_size = 22
+
+[node name="Game_Over_Popup" type="Control"]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 384.0
+offset_top = 256.0
+offset_right = -384.0
+offset_bottom = -208.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5j4dt")
+
+[node name="BorderColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.968627, 0.415686, 0.137255, 1)
+
+[node name="InnerColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.882353, 0.490196, 1)
+
+[node name="BoxContainer" type="BoxContainer" parent="InnerColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+offset_right = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+alignment = 1
+vertical = true
+
+[node name="Label1" type="Label" parent="InnerColorRect/BoxContainer"]
+texture_filter = 1
+layout_mode = 2
+text = "You Lost"
+label_settings = SubResource("LabelSettings_f05es")
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="InnerColorRect/BoxContainer"]
+texture_filter = 1
+layout_mode = 2
+text = "Better Luck Next Time!"
+label_settings = SubResource("LabelSettings_f05es")
+
+[node name="ColorRect" type="ColorRect" parent="InnerColorRect/BoxContainer"]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+color = Color(0.968627, 0.415686, 0.137255, 1)
+
+[node name="Button" type="Button" parent="InnerColorRect/BoxContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_myjip")
+theme_override_colors/font_color = Color(1, 0.992157, 0.941176, 1)
+text = "Play Again"
+flat = true
+
+[connection signal="pressed" from="InnerColorRect/BoxContainer/ColorRect/Button" to="." method="_on_button_pressed"]

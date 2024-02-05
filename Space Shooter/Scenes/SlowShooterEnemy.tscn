@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhpealjgvpcld"]
+
+[ext_resource type="PackedScene" uid="uid://b6yub858xro3q" path="res://Scenes/Enemy.tscn" id="1_nb2t0"]
+[ext_resource type="Texture2D" uid="uid://s5e78s3xolv6" path="res://Assets/enemyShip.png" id="2_od3b1"]
+[ext_resource type="Script" path="res://Scripts/SlowShooterEnemy.gd" id="2_p2wti"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_snrhn"]
+size = Vector2(80, 35)
+
+[node name="SlowShooterEnemy" instance=ExtResource("1_nb2t0")]
+script = ExtResource("2_p2wti")
+bulletDelay = 3.0
+verticalSpeed = 35.0
+healthPoints = 18
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_od3b1")
+
+[node name="CollisionShape2D" parent="." index="1"]
+visible = false
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_snrhn")
+disabled = true
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="2"]
+position = Vector2(-3.8147e-06, 2.38419e-06)
+scale = Vector2(4, 2)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="3"]
+scale = Vector2(0.75, 0.75)
+polygon = PackedVector2Array(-41, -25, -31, -25, -31, -21, -18, -19, -10, -25, 10, -25, 18, -19, 31, -21, 31, -25, 41, -25, 49, -3, 26, 25, 18, 25, 30, -7, 19, 0, 12, 14, -12, 14, -19, 0, -29, -6, -18, 25, -26, 25, -49, -3)
+
+[node name="LeftGun" type="Node2D" parent="FiringPositions" index="0"]
+position = Vector2(-17, 19)
+
+[node name="RightGun" type="Node2D" parent="FiringPositions" index="1"]
+position = Vector2(17, 19)
+
+[node name="FireTimer" type="Timer" parent="." index="5"]
+one_shot = true

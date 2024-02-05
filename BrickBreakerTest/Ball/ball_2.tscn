@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://2r7s6px0up11"]
+
+[ext_resource type="Script" path="res://Ball/ball_2.gd" id="1_slhih"]
+[ext_resource type="Texture2D" uid="uid://bwqxyo2eikrnk" path="res://Assets/more_breakout_pieces.png" id="1_x41ka"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1sukd"]
+radius = 8.0
+
+[node name="Ball2" type="CharacterBody2D"]
+script = ExtResource("1_slhih")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_x41ka")
+region_enabled = true
+region_rect = Rect2(400, 368, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1sukd")

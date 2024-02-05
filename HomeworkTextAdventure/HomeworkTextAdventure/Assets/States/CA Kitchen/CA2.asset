@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: CA2
+  m_EditorClassIdentifier: 
+  storyText: 'You slip past the cooks and make your way into the storage room. The
+    rat is nowhere to be seen inside but instead you see your classmate Karanja changing
+    out of his uniform.
+
+
+    1)" What are you doing?"
+
+    2) "Dafaq??"'
+  nextStates:
+  - {fileID: 11400000, guid: 04d182257fe4b194396ad3f89e3fd805, type: 2}
+  - {fileID: 11400000, guid: 04d182257fe4b194396ad3f89e3fd805, type: 2}

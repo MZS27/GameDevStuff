@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: DA5
+  m_EditorClassIdentifier: 
+  storyText: '"You knew about the cigarettes and ratted me out to the principal."
+
+
+    As
+    he says that he moves his hands to attack you with what seems like a fire blast.
+    How do you respond?
+
+
+    1) Fight back
+
+    2) Do nothing'
+  nextStates:
+  - {fileID: 11400000, guid: 45ae50626030ebe4fadaaf3219fb222b, type: 2}
+  - {fileID: 11400000, guid: 520fe6ab170ca584a941dede9a6f1670, type: 2}

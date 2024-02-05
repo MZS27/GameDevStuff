@@ -1,0 +1,18 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1702794000
+Ball Texture.png::CompressedTexture2D::6821592944765500615::1666630695::1680314337::1::::<><>::
+default_env.tres::Environment::8695219757841472954::1702198968::0::1::::<><>::
+icon.png::CompressedTexture2D::7339485356022432910::1659412318::1680314337::1::::<><>::
+::res://Assets/::1680314337
+Background Texture.png::CompressedTexture2D::6316674817304310162::1659499627::1680314337::1::::<><>::
+Ball Sprite.png::CompressedTexture2D::5377708772158355983::1666633427::1680314337::1::::<><>::
+Paddle Texture.png::CompressedTexture2D::6394853282057117565::1659499667::1680314337::1::::<><>::
+Wall Texture.png::CompressedTexture2D::3974917451290730426::1659721590::1680314337::1::::<><>::
+::res://Scenes/::1702198968
+Ball.tscn::PackedScene::5956912424908476467::1702198968::0::1::::<><>::uid://civacv6ibsk5l::::res://Assets/Ball Sprite.png<>res://Scripts/BallScript.gd
+brick.tscn::PackedScene::7544409211071295388::1702198967::0::1::::<><>::
+Level.tscn::PackedScene::6715709200737405026::1702198967::0::1::::<><>::uid://cjkde8moqkqws::::res://Scenes/Player.tscn<>uid://bwvqkr8wun4p7::::res://Assets/Wall Texture.png<>uid://cq4tqh1xfxnih::::res://Scenes/Ball.tscn<>uid://dfqtk18hxvdcu::::res://Scenes/brick.tscn
+Player.tscn::PackedScene::5425375784289107662::1702198967::0::1::::<><>::uid://cxdykf67gxdp2::::res://Assets/Paddle Texture.png<>res://Scripts/Player.gd
+::res://Scripts/::1702198967
+BallScript.gd::GDScript::-1::1702198967::0::1::::<>CharacterBody2D<>::
+Player.gd::GDScript::-1::1696273502::0::1::::<>CharacterBody2D<>::

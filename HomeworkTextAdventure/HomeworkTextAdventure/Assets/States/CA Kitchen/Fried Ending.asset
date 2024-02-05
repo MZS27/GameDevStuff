@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: Fried Ending
+  m_EditorClassIdentifier: 
+  storyText: 'You make your way back to class but you''re very late. Your Math teacher
+    is furious at you for not doing your homework and being late on top of that.
+
+
+    You''re
+    taken to the principal''s office and since this is your third strike this year,
+    you get a two week suspension.
+
+
+    Maybe you can cook up a better plan next
+    time.
+
+
+    The End [Fried Ending]'
+  nextStates:
+  - {fileID: 11400000, guid: ebe1d79ad50ed3b418be2fa2fa676247, type: 2}

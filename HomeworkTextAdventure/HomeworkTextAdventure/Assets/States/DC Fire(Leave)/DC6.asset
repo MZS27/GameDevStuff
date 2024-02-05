@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: DC6
+  m_EditorClassIdentifier: 
+  storyText: '"I see. Don''t stop trying then. I know you can do better than this."
+
+
+    She
+    continues "I will not take you to the principal''s office today. I know that
+    it''s not a wise decision to make after all the chances I have given you. But
+    I have a feeling you will get it done this time."
+
+
+    1) "I will do it"
+
+    2)
+    "I might do it"'
+  nextStates:
+  - {fileID: 11400000, guid: 113accda4fdaa2c4ea33078189a2c767, type: 2}
+  - {fileID: 11400000, guid: 113accda4fdaa2c4ea33078189a2c767, type: 2}

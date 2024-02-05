@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: Slam Ending
+  m_EditorClassIdentifier: 
+  storyText: 'You run like your life depends on it. Chef Mario chases you but is
+    not able to keep up.
+
+
+    As you continue running, you turn a corner and slam
+    into the principal!
+
+
+    The principal, now seething with rage, calls your Math
+    teacher to ask what you were doing outside your class.
+
+
+    Upon learning about
+    your homework delays on top of slamming him in the school hallway, he suspends
+    you for three weeks.
+
+
+    The End [Slam Ending]'
+  nextStates:
+  - {fileID: 11400000, guid: ebe1d79ad50ed3b418be2fa2fa676247, type: 2}

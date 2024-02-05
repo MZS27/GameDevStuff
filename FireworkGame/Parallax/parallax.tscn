@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://bifkyxap4gn5o"]
+
+[ext_resource type="Script" path="res://Parallax/parallax.gd" id="1_e62df"]
+[ext_resource type="Texture2D" uid="uid://crjpi0nqli8w3" path="res://Assets/Background/back.png" id="1_msvo2"]
+[ext_resource type="Texture2D" uid="uid://bmyg7djy48c8" path="res://Assets/Background/mountains.png" id="2_08rvk"]
+[ext_resource type="Texture2D" uid="uid://el77p15l6xfr" path="res://Assets/Background/far-buildings.png" id="3_fgi4w"]
+[ext_resource type="Texture2D" uid="uid://ckm0nae17js1t" path="res://Assets/Background/near-buildings.png" id="4_rexso"]
+
+[node name="Parallax" type="Node2D"]
+script = ExtResource("1_e62df")
+
+[node name="Future_City" type="Node" parent="."]
+
+[node name="Sky" type="Sprite2D" parent="Future_City"]
+texture_filter = 1
+scale = Vector2(5.5, 5.5)
+texture = ExtResource("1_msvo2")
+centered = false
+
+[node name="Mountains" type="Sprite2D" parent="Future_City"]
+texture_filter = 1
+scale = Vector2(5.5, 5.5)
+texture = ExtResource("2_08rvk")
+centered = false
+
+[node name="Far_Buildings" type="Sprite2D" parent="Future_City"]
+texture_filter = 1
+scale = Vector2(5.5, 5.5)
+texture = ExtResource("3_fgi4w")
+centered = false
+
+[node name="Near_Buildings" type="Sprite2D" parent="Future_City"]
+texture_filter = 1
+scale = Vector2(5.5, 5.5)
+texture = ExtResource("4_rexso")
+centered = false
+
+[node name="Wrecked_City" type="Node" parent="."]
+
+[node name="Industrial_City" type="Node" parent="."]
+
+[node name="Submerged_City" type="Node" parent="."]

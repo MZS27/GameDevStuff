@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: Choked Ending
+  m_EditorClassIdentifier: 
+  storyText: 'Before you can open your mouth, he kicks the desk underneath you.
+
+
+    You
+    are now hanging off the noose. You''re starting to have trouble breathing. You
+    suddenly open your eyes whilst heavily gasping for breath. You find yourself
+    back in your class. Your gasp draws the attention of Mrs. Strupp.
+
+
+    Upon
+    remembering you and your homework, she decides to interrogate you on it. She
+    then takes you to the principal''s office and you get suspended for two weeks.
+
+
+    The
+    End [Choked Ending]'
+  nextStates:
+  - {fileID: 11400000, guid: ebe1d79ad50ed3b418be2fa2fa676247, type: 2}

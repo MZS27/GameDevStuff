@@ -1,0 +1,84 @@
+[gd_scene load_steps=9 format=3 uid="uid://cer7p7n43fi2a"]
+
+[ext_resource type="Texture2D" uid="uid://cljvvc3eet018" path="res://Assets/player_sheet.png" id="1_6e5ox"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_a8b5i"]
+[ext_resource type="Texture2D" uid="uid://bnh0532ij23d8" path="res://Assets/shield.png" id="3_qax16"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ur838"]
+radius = 43.0116
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3p7b"]
+atlas = ExtResource("1_6e5ox")
+region = Rect2(0, 0, 99, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibpcm"]
+atlas = ExtResource("1_6e5ox")
+region = Rect2(198, 0, 99, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtl1o"]
+atlas = ExtResource("1_6e5ox")
+region = Rect2(99, 0, 99, 77)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yi1t2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3p7b")
+}],
+"loop": true,
+"name": &"move_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ibpcm")
+}],
+"loop": true,
+"name": &"move_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gtl1o")
+}],
+"loop": true,
+"name": &"steady",
+"speed": 5.0
+}]
+
+[node name="Player" type="Area2D"]
+script = ExtResource("1_a8b5i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4.2)
+scale = Vector2(0.75, 0.75)
+shape = SubResource("CircleShape2D_ur838")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_yi1t2")
+animation = &"steady"
+
+[node name="FiringPositions" type="Node2D" parent="."]
+
+[node name="GunLeft" type="Node2D" parent="FiringPositions"]
+position = Vector2(-35, -15)
+
+[node name="GunRight" type="Node2D" parent="FiringPositions"]
+position = Vector2(35, -15)
+
+[node name="BulletDelayTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="InvincibilityTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="RapidFireTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="ShieldSprite" type="Sprite2D" parent="."]
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_qax16")
+
+[connection signal="timeout" from="InvincibilityTimer" to="." method="_on_invincibility_timer_timeout"]
+[connection signal="timeout" from="RapidFireTimer" to="." method="_on_rapid_fire_timer_timeout"]

@@ -1,0 +1,104 @@
+[gd_scene load_steps=6 format=3 uid="uid://btrboi6hc6n37"]
+
+[ext_resource type="FontFile" uid="uid://d1v34ga01j2fy" path="res://Assets/Fonts/Next Sunday.otf" id="1_k8o73"]
+[ext_resource type="Script" path="res://Main/game_over_popup.gd" id="1_twehf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_opd0s"]
+font = ExtResource("1_k8o73")
+font_size = 28
+font_color = Color(0.639216, 0.215686, 0.160784, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_b550v"]
+font = ExtResource("1_k8o73")
+font_size = 22
+font_color = Color(0.968627, 0.415686, 0.137255, 1)
+
+[sub_resource type="Theme" id="Theme_tp121"]
+default_font = ExtResource("1_k8o73")
+default_font_size = 22
+
+[node name="GameOverPopup" type="Control"]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_twehf")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 384.0
+offset_top = 256.0
+offset_right = -384.0
+offset_bottom = -208.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.968627, 0.415686, 0.137255, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 400.0
+offset_top = 272.0
+offset_right = -400.0
+offset_bottom = -224.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.882353, 0.490196, 1)
+
+[node name="BoxContainer" type="BoxContainer" parent="ColorRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 12.0
+offset_right = -24.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 24
+alignment = 2
+vertical = true
+
+[node name="Title" type="Label" parent="ColorRect2/BoxContainer"]
+layout_mode = 2
+text = "You Won"
+label_settings = SubResource("LabelSettings_opd0s")
+horizontal_alignment = 1
+
+[node name="Label1" type="Label" parent="ColorRect2/BoxContainer"]
+layout_mode = 2
+text = "Current Time: X Seconds"
+label_settings = SubResource("LabelSettings_b550v")
+
+[node name="Label2" type="Label" parent="ColorRect2/BoxContainer"]
+layout_mode = 2
+text = "Best Time: X Seconds"
+label_settings = SubResource("LabelSettings_b550v")
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2/BoxContainer"]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+color = Color(0.968627, 0.415686, 0.137255, 1)
+
+[node name="Button" type="Button" parent="ColorRect2/BoxContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_tp121")
+theme_override_colors/font_color = Color(1, 0.992157, 0.941176, 1)
+text = "Play Again"
+flat = true
+
+[connection signal="pressed" from="ColorRect2/BoxContainer/ColorRect/Button" to="." method="_on_button_pressed"]

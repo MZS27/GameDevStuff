@@ -1,0 +1,188 @@
+[gd_scene load_steps=10 format=3 uid="uid://b6tgs6wwagc3w"]
+
+[ext_resource type="Script" path="res://scripts/grid.gd" id="1_ylxma"]
+[ext_resource type="Script" path="res://scripts/snake.gd" id="2_1rvtr"]
+[ext_resource type="Script" path="res://scripts/spawner_food.gd" id="3_xjngk"]
+[ext_resource type="Script" path="res://scripts/hit_spotter.gd" id="4_1dyea"]
+[ext_resource type="FontFile" uid="uid://v6mqfryqo4fb" path="res://fonts/font_acme7_wide.ttf" id="5_0tv88"]
+
+[sub_resource type="GDScript" id="GDScript_15w37"]
+resource_name = "ctrl_gameover"
+script/source = "extends Control
+
+
+func _ready():
+	hide()
+	modulate.a = 0
+	
+	Game.game_over.connect(_on_game_over)
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+
+func _on_game_over() -> void:
+	show()
+	create_tween().tween_property(self, \"modulate:a\", 1, 0.2)
+	while !Input.is_action_pressed(\"start\"): await get_tree().process_frame
+	
+	Game.restart()
+"
+
+[sub_resource type="GDScript" id="GDScript_ng23a"]
+resource_name = "ctrl_gamestart"
+script/source = "extends Control
+
+
+func _ready():
+	show()
+	get_tree().set_pause(true)
+	
+	while !Input.is_action_pressed(\"start\"): await get_tree().process_frame
+	
+	get_tree().set_pause(false)
+	create_tween().tween_property(self, \"modulate:a\", 0, 0.2)
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yat8x"]
+bg_color = Color(0.137255, 0.129412, 0.239216, 0.498039)
+
+[sub_resource type="GDScript" id="GDScript_4lhdd"]
+resource_name = "lbl_score"
+script/source = "extends Label
+
+var tween: Tween
+
+func _ready():
+	modulate.a = 0
+	
+	Game.score_changed.connect(_on_score_changed)
+	Game.game_over.connect(_on_gameover)
+
+
+func _process(delta):
+	pass
+
+func _on_score_changed(score: int) -> void:
+	text = str(score)
+	
+	if tween and tween.is_running():
+		tween.kill()
+	tween = create_tween().set_trans(tween.TRANS_SINE)
+	tween.tween_property(self, \"modulate:a\", 1, 0.5).set_ease(Tween.EASE_OUT)
+	tween.tween_property(self, \"modulate:a\", 0, 0.5).set_ease(Tween.EASE_IN)
+
+func _on_gameover() -> void:
+	if tween and tween.is_running():
+		tween.kill()
+	tween = create_tween().set_trans(tween.TRANS_SINE)
+	tween.tween_property(self, \"modulate:a\", 1, 0.5).set_ease(Tween.EASE_OUT)
+"
+
+[node name="world" type="Node2D"]
+
+[node name="grid" type="Node2D" parent="."]
+script = ExtResource("1_ylxma")
+
+[node name="snake" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_1rvtr")
+
+[node name="spawner_food" type="Node2D" parent="."]
+script = ExtResource("3_xjngk")
+
+[node name="hit_spotter" type="Node2D" parent="."]
+script = ExtResource("4_1dyea")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="ctrl_gameover" type="Control" parent="HUD"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_15w37")
+
+[node name="color_rect" type="ColorRect" parent="HUD/ctrl_gameover"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.137255, 0.129412, 0.239216, 0.498039)
+
+[node name="lbl_gameover" type="Label" parent="HUD/ctrl_gameover"]
+modulate = Color(0.94902, 0.94902, 0.941176, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -117.0
+offset_top = -13.0
+offset_right = 117.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_0tv88")
+text = "PRESS [ENTER] TO PLAY AGAIN"
+horizontal_alignment = 1
+
+[node name="ctrl_gamestart" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_ng23a")
+
+[node name="color_rect" type="ColorRect" parent="HUD/ctrl_gamestart"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.137255, 0.129412, 0.239216, 0.498039)
+
+[node name="lbl_gamestart" type="Label" parent="HUD/ctrl_gamestart"]
+modulate = Color(0.94902, 0.94902, 0.941176, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -117.0
+offset_top = -13.0
+offset_right = 117.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_0tv88")
+text = "PRESS [ENTER] TO PLAY"
+horizontal_alignment = 1
+
+[node name="lbl_score" type="Label" parent="HUD"]
+modulate = Color(0.94902, 0.94902, 0.941176, 1)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -48.0
+offset_right = 48.0
+offset_bottom = 31.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("5_0tv88")
+theme_override_styles/normal = SubResource("StyleBoxFlat_yat8x")
+text = "00"
+horizontal_alignment = 1
+script = SubResource("GDScript_4lhdd")

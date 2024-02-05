@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: CA3
+  m_EditorClassIdentifier: 
+  storyText: "\"Oh hello. Do not tell anyone but I am running out of school\" he
+    says pointing to a door at the back of the room \"I go out here, climb up wall
+    and escape from school. You want to come?\".\r\n \r\n1) \"No. I'm going back
+    to class.\" \r\n2) \"I want to come, but I can't. It's too risky.\""
+  nextStates:
+  - {fileID: 11400000, guid: 79db294ff349e61409b25cd6d5fe2c2f, type: 2}
+  - {fileID: 11400000, guid: d753e889b3720a841aa5efbd9bcc209c, type: 2}

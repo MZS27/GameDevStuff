@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: DC3
+  m_EditorClassIdentifier: 
+  storyText: 'Mrs. Strupp sighs and continues "You have delayed submitting a simple
+    assignment for weeks, you are frequently late to school, you sleep in class and
+    show no interest towards your studies. So, I have decided to give you another
+    chance and not take you to the principal''s office."
+
+
+    Everyone in class
+    has a confused look on their face as Mrs. Strupp continues "I know that this
+    homework business has you very much troubled. Threatening you with even the worst
+    kinds of punishment doesn''t seem to make much of a difference overall. I am
+    going to forgive you this time. I want you to promise me that you will work to
+    get past whatever is troubling you in your life. Once you start putting in the
+    work, I know you will become the excellent student you are capable of being."
+
+
+    1)
+    "I promise"
+
+    2) "I will try"'
+  nextStates:
+  - {fileID: 11400000, guid: 113accda4fdaa2c4ea33078189a2c767, type: 2}
+  - {fileID: 11400000, guid: 113accda4fdaa2c4ea33078189a2c767, type: 2}

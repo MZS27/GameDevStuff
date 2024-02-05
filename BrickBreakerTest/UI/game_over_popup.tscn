@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://effadxwa5o0x"]
+
+[ext_resource type="FontFile" uid="uid://ddx6fyrys2g6r" path="res://Assets/Fonts/joystix monospace.otf" id="1_8pmcj"]
+[ext_resource type="Script" path="res://UI/game_over_popup.gd" id="1_fc0c0"]
+
+[sub_resource type="Theme" id="Theme_dhdl1"]
+default_font = ExtResource("1_8pmcj")
+
+[node name="GameOverPopup" type="Control"]
+process_mode = 3
+z_index = 2
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_fc0c0")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 288.0
+offset_right = 888.0
+offset_bottom = 504.0
+color = Color(1, 0.501961, 0.643137, 1)
+
+[node name="GridContainer" type="BoxContainer" parent="ColorRect"]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 517.0
+offset_bottom = 216.0
+theme = SubResource("Theme_dhdl1")
+theme_override_constants/separation = 30
+alignment = 1
+vertical = true
+
+[node name="Label1" type="Label" parent="ColorRect/GridContainer"]
+layout_mode = 2
+text = "You finished the game in 100 seconds"
+
+[node name="Label2" type="Label" parent="ColorRect/GridContainer"]
+layout_mode = 2
+text = "Record Time: 53 seconds"
+
+[node name="Button" type="Button" parent="ColorRect/GridContainer"]
+layout_mode = 2
+text = "Play Again"
+
+[connection signal="pressed" from="ColorRect/GridContainer/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: DA4
+  m_EditorClassIdentifier: 
+  storyText: "You're about to exit the school and head towards the ground when you
+    hear screaming noises coming from behind. You turn around and see the red hoodie
+    kid coming down the corridor setting everything in his path on fire. He seems
+    to have a special ability that helps him generate fire with his hands. \r\n\r\nHe
+    sees you and gets even more fired up. He shouts \"You! It was you who ratted
+    me out to the principal wasn't it? I'm gonna kill ya.\"\r\n\r\n1) \"What in the
+    world are you talking about?\"\r\n2) \"Stop this\""
+  nextStates:
+  - {fileID: 11400000, guid: 227e7954fa36c40499492ee7ce270b87, type: 2}
+  - {fileID: 11400000, guid: 6cf4032f427770d409ae15c02aa57d67, type: 2}

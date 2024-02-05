@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: Fiery Ending
+  m_EditorClassIdentifier: 
+  storyText: 'You continue screaming and as your eyes open you look around you to
+    find yourself back in your class. Mrs. Strupp looks furious with you.
+
+
+    "Were
+    you sleeping in my class again? And I presume you haven''t done your homework
+    either? That''s it. You''re coming with me to the principal''s office."
+
+
+    You
+    are taken to the principal''s office and suspended for two weeks. It looks like
+    now your academic life is on fire.
+
+
+    The End [Fiery Ending]'
+  nextStates:
+  - {fileID: 11400000, guid: ebe1d79ad50ed3b418be2fa2fa676247, type: 2}

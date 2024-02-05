@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://x8saorwhn2ib"]
+
+[ext_resource type="PackedScene" uid="uid://xpdpa2dk5xgm" path="res://plane/plane.tscn" id="1_fc1dt"]
+[ext_resource type="Script" path="res://game/game.gd" id="1_jgtr2"]
+[ext_resource type="PackedScene" uid="uid://cirwe1revw8wm" path="res://pipes/pipes.tscn" id="2_esfuy"]
+[ext_resource type="PackedScene" uid="uid://cjbex5y7ml0u5" path="res://assets/game_over/game_over.tscn" id="4_30vk7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ungkr"]
+size = Vector2(495, 20)
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_jgtr2")
+pipes_scene = ExtResource("2_esfuy")
+
+[node name="Plane" parent="." instance=ExtResource("1_fc1dt")]
+position = Vector2(59, 336)
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(240, 825)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+shape = SubResource("RectangleShape2D_ungkr")
+
+[node name="PipesHolder" type="Node" parent="."]
+
+[node name="SpawnUpper" type="Marker2D" parent="."]
+position = Vector2(530, 340)
+
+[node name="SpawnLower" type="Marker2D" parent="."]
+position = Vector2(530, 540)
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GameOver" parent="CanvasLayer" instance=ExtResource("4_30vk7")]
+visible = false
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

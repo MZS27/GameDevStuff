@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: DC4
+  m_EditorClassIdentifier: 
+  storyText: 'Mrs. Strupp begins walking back towards the classroom board. "You expect
+    me to believe that after a long time, you finally finished your work and you
+    forgot to bring it to school? That too on a day when you risk suspension for
+    not submitting it?"
+
+
+    "You probably think that suspending you for such a
+    small mistake is silly. But I don''t see it as any different from giving you
+    a quick harsh punishment instead."
+
+
+    "After all, you don''t seem to have
+    a problem in going through all this hell just so you can avoid doing a few pages
+    of homework"
+
+
+    1) "I''m trying my best".
+
+    2) "I''m not made for doing
+    homework."'
+  nextStates:
+  - {fileID: 11400000, guid: e4cf8c4b60d688245995d53279992bcf, type: 2}
+  - {fileID: 11400000, guid: 6fbae000e89d264469c01c659712dd56, type: 2}

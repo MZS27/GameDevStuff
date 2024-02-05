@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: DB6
+  m_EditorClassIdentifier: 
+  storyText: '"I understand kid. Not every student is the same. Tasks that seem simple
+    for some may be very difficult for others. But you can''t just sit around and
+    let such a simple challenge take you down. Life will throw much worse at you."
+
+
+    "Right
+    now what you have is time and I want you to use it to fight through the things
+    that are keeping you down."
+
+
+    1) Fight on
+
+    2) Whatever'
+  nextStates:
+  - {fileID: 11400000, guid: 727170a3182685e4baf9f799cfdf5a43, type: 2}
+  - {fileID: 11400000, guid: 727170a3182685e4baf9f799cfdf5a43, type: 2}

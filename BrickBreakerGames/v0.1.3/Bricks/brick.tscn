@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://os26jr42kxmr"]
+
+[ext_resource type="Script" path="res://Bricks/brick.gd" id="1_w0d5x"]
+
+[node name="Brick" type="StaticBody2D"]
+script = ExtResource("1_w0d5x")

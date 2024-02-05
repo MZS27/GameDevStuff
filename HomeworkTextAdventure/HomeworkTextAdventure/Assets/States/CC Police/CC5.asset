@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: CC5
+  m_EditorClassIdentifier: 
+  storyText: 'The officer closes the classroom door and locks it shut.
+
+
+    "You
+    think this is funny? I don''t want to deal with all the bullshit of having you
+    arrested and taken to court. I can end this right now."
+
+
+    He takes a rope
+    and starts tying it to the ceiling fan. It looks like he is making a noose to
+    hang someone.
+
+
+    You try to run away but fail. The officer grabs you and makes
+    you stand on top of a desk as you come face to face with the noose.
+
+
+    1)
+    "Please believe me, it wasn''t me".
+
+    2) Scream for help'
+  nextStates:
+  - {fileID: 11400000, guid: a3902f87e209c7943b7fcce9b1846411, type: 2}
+  - {fileID: 11400000, guid: a3902f87e209c7943b7fcce9b1846411, type: 2}

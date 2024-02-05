@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: CC4
+  m_EditorClassIdentifier: 
+  storyText: 'The officer does not listen to anything you say and drags you out of
+    the class. He takes you out the back entrance of the school
+
+
+    You see the
+    principal standing there alone smoking a cigar. The officer says "It was him.
+    What do I do with him?"
+
+
+    "Oh him? Well he was a problem anyway. Just shoot
+    him no one will care."
+
+
+    The officer pulls out a gun and points it to your
+    head.
+
+
+    1) "IT WASN''T ME!"
+
+    2) Scream for help'
+  nextStates:
+  - {fileID: 11400000, guid: 40044d9ceed86c146843989f7dde9172, type: 2}
+  - {fileID: 11400000, guid: 40044d9ceed86c146843989f7dde9172, type: 2}

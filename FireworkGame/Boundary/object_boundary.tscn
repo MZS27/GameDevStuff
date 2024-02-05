@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://qcw6jyvh6wkw"]
+
+[ext_resource type="Script" path="res://Boundary/object_boundary.gd" id="1_83d8r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_00ik7"]
+size = Vector2(1373, 1937)
+
+[node name="ObjectBoundary" type="Area2D"]
+script = ExtResource("1_83d8r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(399.5, 646.5)
+shape = SubResource("RectangleShape2D_00ik7")
+
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e233a2bc2b1b19447a8f5e505e9029bf, type: 3}
+  m_Name: DC5
+  m_EditorClassIdentifier: 
+  storyText: 'Mrs. Strupp calmly responds "No kid likes doing homework. You''re not
+    special here. I know that it''s not easy for everyone to sit and focus. And to
+    follow a good work ethic on top of that regularly. But that doesn''t let you
+    off the hook. If you cannot get those small habits in order today, it will be
+    very difficult for you to do so when you grow up."
+
+
+    "No matter how trivial
+    or useless you think doing your homework is. No matter how much difficulty you
+    face in getting the willpower to do it. It is your responsibility right now as
+    a student, to do so. Not doing your homework is obviously not some terrible crime,
+    but when you keep shirking off your responsibilities, they keep piling up. Eventually,
+    you get crushed under their weight"
+
+
+    "I will not take you to the principal
+    today. Just promise me you will try to do better"
+
+
+    1) "I promise"
+
+    2)
+    "I will try"'
+  nextStates:
+  - {fileID: 11400000, guid: 113accda4fdaa2c4ea33078189a2c767, type: 2}
+  - {fileID: 11400000, guid: 113accda4fdaa2c4ea33078189a2c767, type: 2}

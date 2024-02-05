@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://delwcqgmjvgcb"]
+
+[ext_resource type="PackedScene" uid="uid://cer7p7n43fi2a" path="res://Scenes/Player.tscn" id="1_0pyus"]
+[ext_resource type="Texture2D" uid="uid://vnx8yjprueku" path="res://Assets/backgroundColor.png" id="1_yerr4"]
+[ext_resource type="Texture2D" uid="uid://b5jbniyh2lfeo" path="res://Assets/starBig.png" id="2_afahg"]
+[ext_resource type="PackedScene" uid="uid://cq1y1ks688gpt" path="res://Scenes/HUD.tscn" id="5_h2ask"]
+[ext_resource type="PackedScene" uid="uid://chg1hognome44" path="res://Scenes/Spawner.tscn" id="5_sbrym"]
+[ext_resource type="Script" path="res://Scripts/Cam.gd" id="6_cn3k0"]
+
+[node name="Gameplay" type="Node"]
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+scale = Vector2(3, 4.009)
+texture = ExtResource("1_yerr4")
+centered = false
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Background"]
+position = Vector2(75, 0)
+amount = 15
+lifetime = 5.0
+texture = ExtResource("2_afahg")
+emission_shape = 3
+emission_rect_extents = Vector2(75, 0)
+direction = Vector2(0, 1)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 30.0
+initial_velocity_max = 40.0
+angle_min = -720.0
+angle_max = 720.0
+scale_amount_min = 0.2
+scale_amount_max = 0.6
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("5_h2ask")]
+
+[node name="Player" parent="." instance=ExtResource("1_0pyus")]
+z_index = 2
+position = Vector2(225, 500)
+
+[node name="Spawner" parent="." instance=ExtResource("5_sbrym")]
+
+[node name="Cam" type="Camera2D" parent="."]
+anchor_mode = 0
+script = ExtResource("6_cn3k0")
